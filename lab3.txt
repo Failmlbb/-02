@@ -1,0 +1,23 @@
+man — выводит страницу справочного руководства с описанием команды;
+apropos — выводит список подходящих команд;
+info — выводит запись из справочного руководства Info с описанием команды;
+whatis — выводит краткое описание команды;
+alias — создает псевдоним для команды.
+foo
+bin    i686-w64-mingw32  lib    libexec  sbin   src  x86_64-w64-mingw32
+games  include           lib64  local    share  tmp
+/home/311u14@nkti.local
+type foo
+foo — это псевдонимом для «cd /usr; ls; cd -»
+unalias foo
+type foo
+bash: type: foo: не найден
+type ls
+ls — это псевдонимом для «ls --color=auto»
+Глава 6
+ls -l /bin/usr > ls-output.txt
+ls: невозможно получить доступ к '/bin/usr': No such file or directory
+ls -l ls-output.txt
+-rw-r--r--. 1 311u14 пользователи домена 0 янв 31 11:24 ls-output.txt
+ls -l ls-output.txt
+-rw-r--r--. 1 311u14 пользователи домена 360942 янв 31 11:27 ls-output.txt
