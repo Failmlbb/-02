@@ -1,0 +1,107 @@
+лаба 7
+@Failmlbb ➜ /workspaces/-02 (main) $ echo $((2+2))
+4
+@Failmlbb ➜ /workspaces/-02 (main) $ echo $((2*2))
+4
+@Failmlbb ➜ /workspaces/-02 (main) $ echo $((2/2))
+1
+решает как кулькулятор
+@Failmlbb ➜ /workspaces/-02 (main) $ echo {01..15}
+01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+перечисляет
+@Failmlbb ➜ /workspaces/-02 (main) $ echo $USER me
+codespace me
+@Failmlbb ➜ /workspaces/-02 (main) $ echo $(ls)
+1 Лекция file1 lab1.txt lab2.txt lab3.txt главы 1-3 чуть чуть 4
+@Failmlbb ➜ /workspaces/-02 (main) $ ls -l $(which cp)
+-rwxr-xr-x 1 root root 153976 Sep  5  2019 /usr/bin/cp
+@Failmlbb ➜ /workspaces/-02 (main) $ ls -l `which cp`
+-rwxr-xr-x 1 root root 71516 2012-12-05 08:58 /bin/cp
+@Failmlbb ➜ /workspaces/-02 (main)$ ls -l Два слова.txt
+ls: невозможно получить доступ к 'Два': Нет такого файла или каталога
+ls: невозможно получить доступ к 'слова.txt': Нет такого файла или каталога
+@Failmlbb ➜ /workspaces/-02 (main) ls -l "Два слова.txt"
+-rw-rw-r-- 1 me me 18 2012-02-20 13:03 Два слова.txt
+@Failmlbb ➜ /workspaces/-02 (main) mv bad\&filename good_filename
+Глава 9
+@Failmlbb ➜ /workspaces/-02 (main) $ chmod
+chmod: missing operand
+Try 'chmod --help' for more information.
+@Failmlbb ➜ /workspaces/-02  (main) $ umask
+su — запускает командную оболочку от имени другого пользователя;
+sudo — выполняет команду от имени другого пользователя;
+chown — изменяет владельца файла;
+chgrp — изменяет группу файла;
+passwd — изменяет пароль пользователя.
+file /etc/shadow
+/etc/shadow: regular file, no read permission
+@Failmlbb ➜ /workspaces/-02 (main) $ ls -l lab2.txt
+-rw-rw-rw- 1 codespace root 9414 Feb  6 04:46 lab2.txt
+ chmod 600 foo.txt
+[me@linuxbox ~]$ ls -l lab2.txt
+-rw------- 1 me me 0 2018-03-06 14:52 foo.txt
+u Сокращенно от user (пользователь), означает владельца файла или каталога
+g Группа
+o Сокращенно от others (другие, остальные), означает весь остальной мир
+a Сокращенно от all (все); комбинация из всех трех символов: u, g и o
+u+x Добавляет право на выполнение, но только для владельца
+u-x Отнимает право на выполнение у владельца
++x Добавляет право на выполнение для владельца, группы и остального мира. Эквивалент записи a+x
+o-rw Отнимает право на чтение и запись у всех, кроме владельца
+и группы
+go=rw Устанавливает право на чтение и запись для всех, кроме владельца. Если прежде файл имел разрешение на выполнение для группы
+и всего мира, это право отнимается
+u+x,go=rx
+@Failmlbb ➜ /workspaces/-02  (main) $ umask
+0022
+@Failmlbb ➜ /workspaces/-02  (main) $ lab2.txt
+bash: lab2.txt: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ > lab2.txt
+@Failmlbb ➜ /workspaces/-02 (main) $ ls -l lab2.txt
+-rw-rw-rw- 1 codespace codespace 0 Feb  6 05:07 lab2.txt
+$ rm foo.txt
+[me@linuxbox ~]$ umask 0000
+[me@linuxbox ~]$ > lab2.txt
+[me@linuxbox ~]$ ls -l lab2.txt
+rm lab2.txt; umask 0022
+su -c 'ls -l /root/*'
+Пароль:
+-rw------- 1 root root 754 2007-08-11 03:19 /root/anaconda-ks.cfg
+/root/Mail:
+итого 0
+sudo backup_script
+Пароль:
+ sudo -l
+User me may run the following commands on this host:
+ (ALL) ALL
+chown [владелец][:[группа]] файл..
+bob Изменит принадлежность файла, назначив владельцем пользователя bob
+bob:users Изменит принадлежность файла, назначив владельцем пользователя bob
+и группу users
+:admins Изменит принадлежность файла, назначив группу admins
+bob: Изменит принадлежность файла, назначив владельцем пользователя bob
+и группу этого пользователя
+sudo cp myfile.txt ~tony
+Пароль:
+[janet@linuxbox ~]$ sudo ls -l ~tony/myfile.txt
+-rw-r--r-- 1 root root 8031 2018-03-20 14:30 /home/tony/myfile.txt
+[janet@linuxbox ~]$ sudo chown tony: ~tony/myfile.txt
+[janet@linuxbox ~]$ sudo ls -l ~tony/myfile.txt
+-rw-r--r-- 1 tony tony 8031 2018-03-20 14:30 /home/tony/myfile.txt
+ rm /usr/local/share/Music/test_file
+[vlad@linuxbox ~]$ > /usr/local/share/Music/test_file
+[vlad@linuxbox ~]$ mkdir /usr/local/share/Music/test_dir
+[vlad@linuxbox ~]$ ls -l /usr/local/share/Music
+drwxrwsr-x 2 bill music 4096 2018-03-24 20:24 test_dir
+-rw-rw-r-- 1 bill music 0 2018-03-24 20:22 test_file
+passwd
+Смена пароля для me.
+$ passwd
+Смена пароля для me.
+(текущий) пароль UNIX:
+ведите новый пароль UNIX:
+BAD PASSWORD: is too similar to the old one
+Введите новый пароль UNIX:
+Выберите пароль большей длины
+Введите новый пароль UNIX:
+BAD PASSWORD: it is based on a dictionary word
