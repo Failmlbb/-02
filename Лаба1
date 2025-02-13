@@ -1,0 +1,109 @@
+Лабораторная работа 1
+28@u28-VirtualBox:~$ etc shadow
+Команда «etc» не найдена. Возможно, вы имели в виду:
+  команда 'dtc' из snap-пакета device-tree-compiler (1.6.1)
+  команда 'atc' из deb-пакета bsdgames (2.17-29)
+  команда 'etm' из deb-пакета etm (3.2.30-1.1)
+  команда 'eta' из deb-пакета eta (1.0.1-1)
+  команда 'etcd' из deb-пакета etcd-server (3.3.25+dfsg-7ubuntu0.22.04.1) команда 'htc' из deb-пакета httptunnel (3.3+dfsg-4) команда 'etr' из deb-пакета extremetuxracer (0.8.1-1)
+  команда 'dtc' из deb-пакета device-tree-compiler (1.6.1-1)
+  команда 'etw' из deb-пакета etw (3.6+svn162-6)
+  команда 'tc' из deb-пакета iproute2 (5.15.0-1ubuntu2)
+  команда 'rtc' из deb-пакета nvram-wakeup (1.1-4build1)
+311U28@git:~/mdk.02.01$ vim /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:992:992:systemd Resolver:/:/usr/sbin/nologin
+311U28@git:~/mdk.02.01$ sudo chmod
+[sudo] password for 311U28:311U28 is not in the sudoers file.
+u28@u28-VirtualBox:~$ nano /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,u28
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:u28
+floppy:x:25:
+tape:x:26:
+sudo:x:27:u28
+audio:x:29:pulse
+dip:x:30:u28
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:u28
+staff:x:50:
+Информация о группах:
+u28@u28-VirtualBox:~$ nano etc shedow
+[1/2]
+Информация о паролях
+Права доступа к объектам
+Смена прав доступа к объектам выполняется администратором командой chmod
+28@u28-VirtualBox:~$ nano sudo chmod 775 <имя объекта>
+28@u28-VirtualBox:~$ nano sudo chmod g-x <имя объекта>
+Смена владельцев и группы владельцев выполнятеся администратором командой chown
+28@u28-VirtualBox:~$ nano sudo chown <владелец:группа владельцев> <имя объекта>
+28@u28-VirtualBox:~$ nano chgrp <группа владельцев> <имя объекта>
+Установка бита SUID осуществляется при помощи программы chmod:
+28@u28-VirtualBox:~$nano sudo chmod u+s <имя файла>
+28@u28-VirtualBox:~$ nano sudo chmod 4775 <имя файла>
+брос бита SUID осуществляется аналогично:
+sudo chmod u-s <имя файла>
+sudo chmod 0775 <имя файла>
+28@u28-VirtualBox:~$ mkdir SB008
+создание папки 
+28@u28-VirtualBox:~$  getfacl SB008/
+Примеры изменения прав доступа при помощи setfacl -m:Изменяем ACL для tmp7:
+28@u28-VirtualBox:~$ setfacl -m u:tmp7:rx SB008/
+28@u28-VirtualBox:~$ getfacl SB008/
+# file: SB008/
+# owner: 28u
+# group: 26u
+# flags: --t
+user::rwx
+user:tmp6:rwx
+user:tmp7:r-x
+group::rwx
+mask::rwx
+other::rwxПри помощи chmod меняем стандартные права доступа:
+student@alexander-VirtualBox:~$ sudo chmod ugo-w SB008/
