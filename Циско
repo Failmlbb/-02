@@ -1,0 +1,246 @@
+Отчёт
+Сегодня на парах МДК 2.0
+Я Работал В Cisco Paket Tracer
+Настраивая Switch ,Server, Router
+Используя команды
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.2
+ encapsulation dot1Q 2
+ ip address 192.168.2.254 255.255.255.0
+!
+interface GigabitEthernet0/0.3
+ encapsulation dot1Q 3
+ip address 192.168.3.254 255.255.255.0
+!
+interface GigabitEthernet0/0.4
+ encapsulation dot1Q 6
+ ip address 192.168.4.254 255.255.255.0
+!
+interface GigabitEthernet0/0.5
+ encapsulation dot1Q 5
+ ip address 192.168.5.254 255.255.255.0
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/1.2
+ encapsulation dot1Q 6
+ ip address 192.168.6.254 255.255.255.0
+!
+interface GigabitEthernet0/2
+no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+Router(config)# int gi0/0.2
+Router(config-subif)#ip hel
+Router(config-subif)#ip help
+Router(config-subif)#ip helper-address 192.168.5.1
+Router(config-subif)#
+Router(config-subif)# int gi0/0.3
+Router(config-subif)#ip helper-address 192.168.5.1
+Router(config-subif)# int gi0/0.4
+Router(config-subif)#ip helper-address 192.168.5.1
+Router(config-subif)#end
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#show run
+Current configuration : 1252 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.2
+ encapsulation dot1Q 2
+ ip address 192.168.2.254 255.255.255.0
+ ip helper-address 192.168.5.1
+!
+interface GigabitEthernet0/0.3
+ encapsulation dot1Q 3
+ ip address 192.168.3.254 255.255.255.0
+ ip helper-address 192.168.5.1
+
+interface GigabitEthernet0/0.4
+ encapsulation dot1Q 6
+ ip address 192.168.4.254 255.255.255.0
+ ip helper-address 192.168.5.1
+!
+interface GigabitEthernet0/0.5
+ encapsulation dot1Q 5
+ ip address 192.168.5.254 255.255.255.0
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/1.2
+ encapsulation dot1Q 6
+ ip address 192.168.6.254 255.255.255.0
+!
+interface GigabitEthernet0/2
+
+no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+
+ine vty 0 4
+ login
+!
+!
+!
+end
+
+
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int gi0/0.4
+Router(config-subif)#enc
+Router(config-subif)#encapsulation
+Router(config-subif)#encapsulation dot1Q 4
+Router(config-subif)#
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool dir2
+Router(dhcp-config)#network 192.168.3.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.4.254
+
+Router(config)#ip dhcp pool dir
+Router(dhcp-config)#network 192.168.2.0 255.255.255.0
+Router(dhcp-config)#def
+% Incomplete command.
+Router(dhcp-config)#default-router 192.168.2.254
+Router(dhcp-config)#ip dhcp pool dir1
+Router(dhcp-config)#default-router 192.168.3.254
+Router(dhcp-config)#default-router 192.168.3.254
+Router(dhcp-config)#ip dhcp pool dir2
+Router(dhcp-config)#default-router 192.168.4.254
+Router(dhcp-config)#network 192.168.4.0 255.255.255.0
+Router(dhcp-config)#ip dhcp pool dir1
+Router(dhcp-config)#network 192.168.3.0 255.255.255.0
+Router(dhcp-config)#ip dhcp pool dir3
+Router(dhcp-config)#network 192.168.5.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.5.254
+Router(dhcp-config)#network 192.168.5.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.5.254
+Router(dhcp-config)#ip dhcp pool dir4
+Router(dhcp-config)#default-router 192.168.6.254
+Router(dhcp-config)#network 192.168.6.0 255.255.255.0
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool dir
+Router(dhcp-config)#network 192.168.2.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.2.254
+Router(dhcp-config)#ip dhcp pool dir1
+Router(dhcp-config)#default-router 192.168.3.254
+Router(dhcp-config)#network 192.168.3.0 255.255.255.0
+Router(dhcp-config)#ip dhcp pool dir2
+Router(dhcp-config)#network 192.168.3.0 255.255.255.0
+Router(dhcp-config)#network 192.168.4.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.4.254
+Router(dhcp-config)#ip dhcp pool dir3
+Router(dhcp-config)#default-router 192.168.5.254
+Router(dhcp-config)#network 192.168.5.0 255.255.255.0
+Router(dhcp-config)#exit
+outer(config-if)#int gi0/0.2
+Router(config-subif)#ip add 192.168.2.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface GigabitEthernet 0/0
+Router(config-if)#int gi0/0.2
+Router(config-subif)#encapsulation dot1Q 2
+Router(config-subif)#ip add 192.168.2.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#int gi0/0.3
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#ip add 192.168.3.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#int gi0/0.4
+Router(config-subif)#encapsulation dot1Q 4
+Router(config-subif)#ip add 192.168.4.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#int gi0/0.5
+Router(config-subif)#ip add 192.168.5.254 255.255.255.0
+
+% Configuring IP routing on a LAN subinterface is only allowed if that
+subinterface is already configured as part of an IEEE 802.10, IEEE 802.1Q,
+or ISL vLAN.
+
+
