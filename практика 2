@@ -169,34 +169,6 @@ Router(config-if)#
 %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1.5, changed state to up
 
 Router(config-if)#
-Router(config-if)#
+Router(config-if)
+Удалтив пулы из роутера И дабавив их в Сервер язакончил работы с 2 работами
 
-
-
-
-
-
-
-
-Router con0 is now available
-
-
-
-
-
-
-Press RETURN to get started.
-
-
-
-
-
-
-
-
-
-
-
-
-
-Press RETURN to get started!
