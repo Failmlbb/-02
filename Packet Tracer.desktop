@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name[ru_RU]=Packet Tracer
+Exec="/wine/drive_c/Program Files/Cisco Packet Tracer 8.2.1/bin/PacketTracer.exe"
+Icon=/wine/drive_c/Program Files (x86)/Cisco Packet Tracer 6.2sv/cisco-packet-tracer-64-bit-logo-ppmkimvibpsxtwondxdbr2lzk9fmghn4eea6fbybto.png
+Icon[ru_RU]=/wine/drive_c/Program Files (x86)/Cisco Packet Tracer 6.2sv/art/app_student.png
+Name=Packet Tracer
