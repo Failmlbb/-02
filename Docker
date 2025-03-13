@@ -1,0 +1,171 @@
+u28@u28-VirtualBox:~$ docker images -a
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+redmine                  latest    7d35e1c9e446   2 days ago     611MB
+clearlinux               latest    6c25eee4999c   6 days ago     198MB
+mysql                    latest    5568fddd4f66   7 weeks ago    797MB
+ubuntu                   20.04     6013ae1a63c2   5 months ago   72.8MB
+docker/getting-started   latest    3e4394f6b72f   2 years ago    47MB
+u28@u28-VirtualBox:~$ docker pull ubuntu 20.04
+docker: 'docker pull' requires 1 argument
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Run 'docker pull --help' for more information
+u28@u28-VirtualBox:~$ docker serch ubuntu
+docker: unknown command: docker serch
+
+Run 'docker --help' for more information
+u28@u28-VirtualBox:~$ docker search --filter stars=50 mysql
+^[[ANAME                  DESCRIPTION                                     STARS     OFFICIAL
+mysql                 MySQL is a widely used, open-source relation…   15687     [OK]
+bitnami/mysql         Bitnami container image for MySQL               132       
+ubuntu/mysql          MySQL open source fast, stable, multi-thread…   67        
+mysql/mysql-server    Optimized MySQL Server Docker images. Create…   1026      
+mysql/mysql-cluster   Experimental MySQL Cluster Docker images. Cr…   100       
+u28@u28-VirtualBox:~$ docker pull clearlingnux
+Using default tag: latest
+^[[AError response from daemon: pull access denied for clearlingnux, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+u28@u28-VirtualBox:~$ docker pull mysql
+Using default tag: latest
+^[[A^[[latest: Pulling from library/mysql
+Digest: sha256:146682692a3aa409eae7b7dc6a30f637c6cb49b6ca901c2cd160becc81127d3b
+Status: Image is up to date for mysql:latest
+docker.io/library/mysql:latest
+u28@u28-VirtualBox:~$ docker pull redmine
+Using default tag: latest
+latest: Pulling from library/redmine
+Digest: sha256:93ebc40190f072b86735a4c82537e5d8fdec39d6075c2fe0b7a7324f5ce54e5b
+Status: Image is up to date for redmine:latest
+docker.io/library/redmine:latest
+u28@u28-VirtualBox:~$ docker run  -d 6c25eee4999c
+70e79af87ae961d7ccc390cb202593a7250fc8f7091d1e03b3558b865b5f3a63
+u28@u28-VirtualBox:~$ docker run  -d 5568fddd4f66
+eb8f0ef365676e29230d65dd24c26c05cb7fb2ab910718e464b7b46247dc5e89
+^[[A^[[Au28@u28-VirtualBox:~$ docker run  -d 7d35e1c9e446
+da225158afd7da8c84b82b6a9564e35fef6620624c8dbd43df8b615071e7069d
+u28@u28-VirtualBox:~$ docker run  -d 6013ae1a63c2
+5e63d6ea09ed20c83795ef92324aa3df5f55814c9f5d2b1f9aeba9c495c6fab0
+u28@u28-VirtualBox:~$ uname -a
+Linux u28-VirtualBox 6.8.0-52-generic #53~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jan 15 19:18:46 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+u28@u28-VirtualBox:~$ docker ps -a
+CONTAINER ID   IMAGE                    COMMAND                  CREATED              STATUS                           PORTS                                     NAMES
+5e63d6ea09ed   6013ae1a63c2             "/bin/bash"              55 seconds ago       Exited (0) 49 seconds ago                                                  suspicious_lewin
+da225158afd7   7d35e1c9e446             "/docker-entrypoint.…"   About a minute ago   Up About a minute                3000/tcp                                  sad_jennings
+eb8f0ef36567   5568fddd4f66             "docker-entrypoint.s…"   About a minute ago   Exited (1) About a minute ago                                              compassionate_cerf
+70e79af87ae9   6c25eee4999c             "/bin/bash"              2 minutes ago        Exited (0) 2 minutes ago                                                   cranky_banzai
+32f90a0e4c64   7d35e1c9e446             "/docker-entrypoint.…"   7 minutes ago        Up 7 minutes                     3000/tcp                                  dazzling_vaughan
+dea0512b051e   5568fddd4f66             "docker-entrypoint.s…"   8 minutes ago        Exited (1) 8 minutes ago                                                   nervous_leavitt
+96872e0eb1b4   6c25eee4999c             "/bin/bash"              8 minutes ago        Exited (0) 8 minutes ago                                                   silly_kapitsa
+4074e47c0a0b   3e4394f6b72f             "/docker-entrypoint.…"   21 minutes ago       Up 21 minutes                    80/tcp                                    ecstatic_joliot
+c8c61e184bda   6013ae1a63c2             "/bin/bash"              28 minutes ago       Exited (0) 28 minutes ago                                                  focused_banach
+c4bf609c691e   3e4394f6b72f             "/docker-entrypoint.…"   33 minutes ago       Up 33 minutes                    80/tcp                                    elated_goldstine
+b99033c0afa7   docker/getting-started   "/docker-entrypoint.…"   5 days ago           Exited (255) About an hour ago   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   condescending_bouman
+u28@u28-VirtualBox:~$ docker run -it 6013ae1a63c2
+root@cfdf4562cf2a:/# cat /etc/*-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+root@cfdf4562cf2a:/# apt install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@cfdf4562cf2a:/# apt install iproute2 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2
+root@cfdf4562cf2a:/# apt install iproute2 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2
+root@cfdf4562cf2a:/# ip a       
+bash: ip: command not found
+root@cfdf4562cf2a:/# ip -br -4 a
+bash: ip: command not found
+root@cfdf4562cf2a:/# exit
+docker start -i 5e63d6ea09ed 
+u28@u28-VirtualBox:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS      NAMES
+da225158afd7   7d35e1c9e446   "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   3000/tcp   sad_jennings
+32f90a0e4c64   7d35e1c9e446   "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes   3000/tcp   dazzling_vaughan
+4074e47c0a0b   3e4394f6b72f   "/docker-entrypoint.…"   30 minutes ago   Up 30 minutes   80/tcp     ecstatic_joliot
+c4bf609c691e   3e4394f6b72f   "/docker-entrypoint.…"   42 minutes ago   Up 42 minutes   80/tcp     elated_goldstine
+u28@u28-VirtualBox:~$ docker run -it 6013ae1a63c2
+root@cfdf4562cf2a:/# cat /etc/*-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+root@cfdf4562cf2a:/# apt install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@cfdf4562cf2a:/# apt install iproute2 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2
+root@cfdf4562cf2a:/# apt install iproute2 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2
+root@cfdf4562cf2a:/# ip a       
+bash: ip: command not found
+root@cfdf4562cf2a:/# ip -br -4 a
+bash: ip: command not found
+root@cfdf4562cf2a:/# exit
+u28@u28-VirtualBox:~$ docker run -it 6c25eee4999c
+root@69fb35f5517b/ # cat /etc/*-release
+NAME="Clear Linux OS"
+VERSION=1
+ID=clear-linux-os
+ID_LIKE=clear-linux-os
+VERSION_ID=43090
+PRETTY_NAME="Clear Linux OS"
+ANSI_COLOR="1;35"
+HOME_URL="https://clearlinux.org"
+SUPPORT_URL="https://clearlinux.org"
+BUG_REPORT_URL="mailto:dev@clearlinux.discoursemail.com"
+PRIVACY_POLICY_URL="http://www.intel.com/privacy"
+BUILD_ID=43090
+root@69fb35f5517b/ # 
+exit
+u28@u28-VirtualBox:~$ docker run -it 5568fddd4f66
+2025-03-13 07:12:22+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-13 07:12:26+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-03-13 07:12:26+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-13 07:12:26+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+в связи с ctrl D в все вылетело и загрузок не поэтому не будет
