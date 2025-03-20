@@ -1,0 +1,783 @@
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS              PORTS     NAMES
+b29d9865d230   ubuntu    "sh"      About a minute ago   Up About a minute             angry_raman
+@Failmlbb ➜ /workspaces/-02 (main) $ docker stop b29d9865d230
+b29d9865d230
+@Failmlbb ➜ /workspaces/-02 (main) 
+@Failmlbb ➜ /workspaces/-02 (main) 
+@Failmlbb ➜ /workspaces/-02 (ma
+@Failmlbb ➜ /workspaces/-02 (ma
+@Failmlbb ➜ /workspaces/-02 (ma
+@Failmlbb ➜ /workspaces/-02 (
+@Failmlbb ➜ /workspaces/-02 (
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspa
+@Failmlbb ➜ /workspaces
+@Failmlbb ➜ /workspaces
+@Failmlbb ➜ /workspaces/-0
+@Failmlbb ➜ /workspaces/-0
+@Failmlbb ➜ /workspaces/-0
+@Failmlbb ➜ /workspaces/-0
+@Failmlbb ➜ /workspaces/-02 (main
+@Failmlbb ➜ /workspaces/-02 (main)
+@Failmlbb ➜ /workspaces/-02 (main) $
+@Failmlbb ➜ /workspaces/-02 (main) $ ls
+ 06-07.03.2025  'New Folder'              lab1.txt   Лаба4
+'1 Лекция'      'Packet Tracer.desktop'   lab2.txt   Циско
+'Dhcp 2.pkt'     dhcp1.pkt                lab3.txt  'главы 1-3 чуть чуть 4'
+ Docker          file1                    Лаба1     'практика 2'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND       CREATED         STATUS         PORTS     NAMES
+b9e352ff06d4   6013ae1a63c2   "/bin/bash"   5 minutes ago   Up 5 minutes             musing_fermi
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <failmlbb:20.04>enied
+bash: failmlbb:20.04: No such file or directory
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <failmlbb:20.04>
+bash: syntax error near unexpected token `newline'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" b9e352ff06d4 <failmlbb:20.04>
+bash: syntax error near unexpected token `newline'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade" -a "fail" b9e352ff06d4 <failmlbb:20.04>
+bash: syntax error near unexpected token `newline'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade" -a "fail" b9e352ff06d4 failmlbb:20.04
+sha256:c8cb345c3b47d0fae4c3c848c042f747351cd9443ce0cd42a5cebc0ea1c09d57
+@Failmlbb ➜ /workspaces/-02 (main) $ docker history
+"docker history" requires exactly 1 argument.
+See 'docker history --help'.
+
+Usage:  docker history [OPTIONS] IMAGE
+
+Show the history of an image
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS     NAMES
+b9e352ff06d4   6013ae1a63c2   "/bin/bash"   26 minutes ago   Up 26 minutes             musing_fermi
+@Failmlbb ➜ /workspaces/-02 (main) $ docker image
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker histori b9e352ff06d4
+docker: 'histori' is not a docker command.
+See 'docker --help'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker histori 6013ae1a63c2
+docker: 'histori' is not a docker command.
+See 'docker --help'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+failmlbb     20.04     c8cb345c3b47   7 minutes ago   202MB
+ubuntu       latest    a04dc4851cbc   7 weeks ago     78.1MB
+ubuntu       20.04     6013ae1a63c2   5 months ago    72.8MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker history c8cb345c3b47
+IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+c8cb345c3b47   7 minutes ago   /bin/bash                                       129MB     installation apt upgrade
+6013ae1a63c2   5 months ago    /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B        
+<missing>      5 months ago    /bin/sh -c #(nop) ADD file:7486147a645d8835a…   72.8MB    
+<missing>      5 months ago    /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      5 months ago    /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      5 months ago    /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B        
+<missing>      5 months ago    /bin/sh -c #(nop)  ARG RELEASE                  0B        
+@Failmlbb ➜ /workspaces/-02 (main) $ ^C
+@Failmlbb ➜ /workspaces/-02 (main) $ ^C
+bash: $'\003': command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ docker search
+"docker search" requires exactly 1 argument.
+See 'docker search --help'.
+
+Usage:  docker search [OPTIONS] TERM
+
+Search Docker Hub for images
+@Failmlbb ➜ /workspaces/-02 (main) $ docker search --filter stars=50 mysql
+NAME                  DESCRIPTION                                     STARS     OFFICIAL
+mysql                 MySQL is a widely used, open-source relation…   15702     [OK]
+bitnami/mysql         Bitnami container image for MySQL               132       
+ubuntu/mysql          MySQL open source fast, stable, multi-thread…   67        
+mysql/mysql-server    Optimized MySQL Server Docker images. Create…   1026      
+mysql/mysql-cluster   Experimental MySQL Cluster Docker images. Cr…   100       
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull ubuntu 20.04
+"docker pull" requires exactly 1 argument.
+See 'docker pull --help'.
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Download an image from a registry
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+d9802f032d67: Pull complete 
+Digest: sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b
+Status: Downloaded newer image for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run –it ubuntu sh
+docker: invalid reference format.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run –it ubuntu sh
+docker: invalid reference format.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run –it ubuntu sh
+docker: invalid reference format.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run --help
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+
+Aliases:
+  docker container run, docker run
+
+Options:
+      --add-host list                    Add a custom host-to-IP mapping (host:ip)
+      --annotation map                   Add an annotation to the container (passed through to the OCI runtime) (default map[])
+  -a, --attach list                      Attach to STDIN, STDOUT or STDERR
+      --blkio-weight uint16              Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0)
+      --blkio-weight-device list         Block IO weight (relative device weight) (default [])
+      --cap-add list                     Add Linux capabilities
+      --cap-drop list                    Drop Linux capabilities
+      --cgroup-parent string             Optional parent cgroup for the container
+      --cgroupns string                  Cgroup namespace to use (host|private)
+                                         'host':    Run the container in the Docker host's cgroup namespace
+                                         'private': Run the container in its own private cgroup namespace
+                                         '':        Use the cgroup namespace as configured by the
+                                                    default-cgroupns-mode option on the daemon (default)
+      --cidfile string                   Write the container ID to the file
+      --cpu-period int                   Limit CPU CFS (Completely Fair Scheduler) period
+      --cpu-quota int                    Limit CPU CFS (Completely Fair Scheduler) quota
+      --cpu-rt-period int                Limit CPU real-time period in microseconds
+      --cpu-rt-runtime int               Limit CPU real-time runtime in microseconds
+  -c, --cpu-shares int                   CPU shares (relative weight)
+      --cpus decimal                     Number of CPUs
+      --cpuset-cpus string               CPUs in which to allow execution (0-3, 0,1)
+      --cpuset-mems string               MEMs in which to allow execution (0-3, 0,1)
+  -d, --detach                           Run container in background and print container ID
+      --detach-keys string               Override the key sequence for detaching a container
+      --device list                      Add a host device to the container
+      --device-cgroup-rule list          Add a rule to the cgroup allowed devices list
+      --device-read-bps list             Limit read rate (bytes per second) from a device (default [])
+      --device-read-iops list            Limit read rate (IO per second) from a device (default [])
+      --device-write-bps list            Limit write rate (bytes per second) to a device (default [])
+      --device-write-iops list           Limit write rate (IO per second) to a device (default [])
+      --disable-content-trust            Skip image verification (default true)
+      --dns list                         Set custom DNS servers
+      --dns-option list                  Set DNS options
+      --dns-search list                  Set custom DNS search domains
+      --domainname string                Container NIS domain name
+      --entrypoint string                Overwrite the default ENTRYPOINT of the image
+  -e, --env list                         Set environment variables
+      --env-file list                    Read in a file of environment variables
+      --expose list                      Expose a port or a range of ports
+      --gpus gpu-request                 GPU devices to add to the container ('all' to pass all GPUs)
+      --group-add list                   Add additional groups to join
+      --health-cmd string                Command to run to check health
+      --health-interval duration         Time between running the check (ms|s|m|h) (default 0s)
+      --health-retries int               Consecutive failures needed to report unhealthy
+      --health-start-interval duration   Time between running the check during the start period (ms|s|m|h) (default 0s)
+      --health-start-period duration     Start period for the container to initialize before starting health-retries countdown (ms|s|m|h) (default 0s)
+      --health-timeout duration          Maximum time to allow one check to run (ms|s|m|h) (default 0s)
+      --help                             Print usage
+  -h, --hostname string                  Container host name
+      --init                             Run an init inside the container that forwards signals and reaps processes
+  -i, --interactive                      Keep STDIN open even if not attached
+      --ip string                        IPv4 address (e.g., 172.30.100.104)
+      --ip6 string                       IPv6 address (e.g., 2001:db8::33)
+      --ipc string                       IPC mode to use
+      --isolation string                 Container isolation technology
+      --kernel-memory bytes              Kernel memory limit
+  -l, --label list                       Set meta data on a container
+      --label-file list                  Read in a line delimited file of labels
+      --link list                        Add link to another container
+      --link-local-ip list               Container IPv4/IPv6 link-local addresses
+      --log-driver string                Logging driver for the container
+      --log-opt list                     Log driver options
+      --mac-address string               Container MAC address (e.g., 92:d0:c6:0a:29:33)
+  -m, --memory bytes                     Memory limit
+      --memory-reservation bytes         Memory soft limit
+      --memory-swap bytes                Swap limit equal to memory plus swap: '-1' to enable unlimited swap
+      --memory-swappiness int            Tune container memory swappiness (0 to 100) (default -1)
+      --mount mount                      Attach a filesystem mount to the container
+      --name string                      Assign a name to the container
+      --network network                  Connect a container to a network
+      --network-alias list               Add network-scoped alias for the container
+      --no-healthcheck                   Disable any container-specified HEALTHCHECK
+      --oom-kill-disable                 Disable OOM Killer
+      --oom-score-adj int                Tune host's OOM preferences (-1000 to 1000)
+      --pid string                       PID namespace to use
+      --pids-limit int                   Tune container pids limit (set -1 for unlimited)
+      --platform string                  Set platform if server is multi-platform capable
+      --privileged                       Give extended privileges to this container
+  -p, --publish list                     Publish a container's port(s) to the host
+  -P, --publish-all                      Publish all exposed ports to random ports
+      --pull string                      Pull image before running ("always", "missing", "never") (default "missing")
+  -q, --quiet                            Suppress the pull output
+      --read-only                        Mount the container's root filesystem as read only
+      --restart string                   Restart policy to apply when a container exits (default "no")
+      --rm                               Automatically remove the container and its associated anonymous volumes when it exits
+      --runtime string                   Runtime to use for this container
+      --security-opt list                Security Options
+      --shm-size bytes                   Size of /dev/shm
+      --sig-proxy                        Proxy received signals to the process (default true)
+      --stop-signal string               Signal to stop the container
+      --stop-timeout int                 Timeout (in seconds) to stop a container
+      --storage-opt list                 Storage driver options for the container
+      --sysctl map                       Sysctl options (default map[])
+      --tmpfs list                       Mount a tmpfs directory
+  -t, --tty                              Allocate a pseudo-TTY
+      --ulimit ulimit                    Ulimit options (default [])
+  -u, --user string                      Username or UID (format: <name|uid>[:<group|gid>])
+      --userns string                    User namespace to use
+      --uts string                       UTS namespace to use
+  -v, --volume list                      Bind mount a volume
+      --volume-driver string             Optional volume driver for the container
+      --volumes-from list                Mount volumes from the specified container(s)
+  -w, --workdir string                   Working directory inside the container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run –it ubuntu sh
+docker: invalid reference format.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run –it ubuntu sh
+docker: invalid reference format.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it ubuntu sh
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+5a7813e071bf: Pull complete 
+Digest: sha256:72297848456d5d37d1262630108ab308d3e9ec7ed1c3286a32fe09856619a782
+Status: Downloaded newer image for ubuntu:latest
+# 
+# ^[[C^: not found
+# : 2: 
+# 
+# 
+# ^[[A : not found
+# ^[[A^[[B@Failmlbb ➜ /workspaces/-02 (main) $ apt update
+Reading package lists... Done
+E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)
+@Failmlbb ➜ /workspaces/-02 (main) $ apt update
+Reading package lists... Done
+E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)
+@Failmlbb ➜ /workspaces/-02 (main) $ apt upgrade
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+@Failmlbb ➜ /workspaces/-02 (main) $ apt install iproute2
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+@Failmlbb ➜ /workspaces/-02 (main) $ apt install iputils-ping
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+@Failmlbb ➜ /workspaces/-02 (main) $ pt install dnsutils
+bash: pt: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ apt install dnsutils
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it b29d9865d230
+Unable to find image 'b29d9865d230:latest' locally
+docker: Error response from daemon: pull access denied for b29d9865d230, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it b29d9865d230
+Unable to find image 'b29d9865d230:latest' locally
+docker: Error response from daemon: pull access denied for b29d9865d230, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-0@Failmlbb ➜ /wor  @Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+ubuntu       latest    a04dc4851cbc   7 weeks ago    78.1MB
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it 6013ae1a63c2
+root@b9e352ff06d4:/# apt update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [42.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [4441 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]  
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1301 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [4269 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1595 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [4638 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [4756 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [45.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+Fetched 34.6 MB in 3s (12.2 MB/s)                       
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@b9e352ff06d4:/# apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  libc-bin libc6 libgnutls30 libtasn1-6
+4 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 4223 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.17 [2721 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-bin amd64 2.31-0ubuntu9.17 [634 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtasn1-6 amd64 4.16.0-2ubuntu0.1 [38.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls30 amd64 3.6.13-2ubuntu1.12 [829 kB]
+Fetched 4223 kB in 1s (4543 kB/s)    
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../libc6_2.31-0ubuntu9.17_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Unpacking libc6:amd64 (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Setting up libc6:amd64 (2.31-0ubuntu9.17) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../libc-bin_2.31-0ubuntu9.17_amd64.deb ...
+Unpacking libc-bin (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Setting up libc-bin (2.31-0ubuntu9.17) ...
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../libtasn1-6_4.16.0-2ubuntu0.1_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.16.0-2ubuntu0.1) over (4.16.0-2) ...
+Setting up libtasn1-6:amd64 (4.16.0-2ubuntu0.1) ...
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../libgnutls30_3.6.13-2ubuntu1.12_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+Setting up libgnutls30:amd64 (3.6.13-2ubuntu1.12) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.17) ...
+root@b9e352ff06d4:/# apt install iproute2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libatm1 libbsd0 libcap2 libcap2-bin libelf1 libmnl0 libpam-cap
+  libxtables12
+Suggested packages:
+  iproute2-doc
+The following NEW packages will be installed:
+  iproute2 libatm1 libbsd0 libcap2 libcap2-bin libelf1 libmnl0 libpam-cap
+  libxtables12
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1060 kB of archives.
+After this operation, 3682 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libbsd0 amd64 0.10.0-1 [45.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2 amd64 1:2.32-1ubuntu0.2 [15.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libelf1 amd64 0.176-1.1ubuntu0.1 [44.2 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libmnl0 amd64 1.0.4-2 [12.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxtables12 amd64 1.8.4-3ubuntu2.1 [28.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2-bin amd64 1:2.32-1ubuntu0.2 [26.2 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 iproute2 amd64 5.5.0-1ubuntu1 [858 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 libatm1 amd64 1:2.5.1-4 [21.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-cap amd64 1:2.32-1ubuntu0.2 [8376 B]
+Fetched 1060 kB in 1s (1375 kB/s) 
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../0-libbsd0_0.10.0-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.10.0-1) ...
+Selecting previously unselected package libcap2:amd64.
+Preparing to unpack .../1-libcap2_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1ubuntu0.2) ...
+Selecting previously unselected package libelf1:amd64.
+Preparing to unpack .../2-libelf1_0.176-1.1ubuntu0.1_amd64.deb ...
+Unpacking libelf1:amd64 (0.176-1.1ubuntu0.1) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../3-libmnl0_1.0.4-2_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.4-2) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../4-libxtables12_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../5-libcap2-bin_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1ubuntu0.2) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../6-iproute2_5.5.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (5.5.0-1ubuntu1) ...
+Selecting previously unselected package libatm1:amd64.
+Preparing to unpack .../7-libatm1_1%3a2.5.1-4_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-4) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../8-libpam-cap_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.32-1ubuntu0.2) ...
+Setting up libatm1:amd64 (1:2.5.1-4) ...
+Setting up libcap2:amd64 (1:2.32-1ubuntu0.2) ...
+Setting up libcap2-bin (1:2.32-1ubuntu0.2) ...
+Setting up libmnl0:amd64 (1.0.4-2) ...
+Setting up libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up libbsd0:amd64 (0.10.0-1) ...
+Setting up libelf1:amd64 (0.176-1.1ubuntu0.1) ...
+Setting up libpam-cap:amd64 (1:2.32-1ubuntu0.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iproute2 (5.5.0-1ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Processing triggers for libc-bin (2.31-0ubuntu9.17) ...
+root@b9e352ff06d4:/# apt install iputils-ping
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  iputils-ping
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 40.0 kB of archives.
+After this operation, 109 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 iputils-ping amd64 3:20190709-3ubuntu1 [40.0 kB]
+Fetched 40.0 kB in 0s (874 kB/s)        
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package iputils-ping.
+(Reading database ... 4342 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20190709-3ubuntu1_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3ubuntu1) ...
+Setting up iputils-ping (3:20190709-3ubuntu1) ...
+root@b9e352ff06d4:/# apt install dnsutils
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  bind9-dnsutils bind9-host bind9-libs krb5-locales libedit2
+  libgssapi-krb5-2 libicu66 libjson-c4 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 liblmdb0 libmaxminddb0 libnghttp2-14 libssl1.1 libuv1
+  libxml2 tzdata
+Suggested packages:
+  krb5-doc krb5-user mmdb-bin
+The following NEW packages will be installed:
+  bind9-dnsutils bind9-host bind9-libs dnsutils krb5-locales libedit2
+  libgssapi-krb5-2 libicu66 libjson-c4 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 liblmdb0 libmaxminddb0 libnghttp2-14 libssl1.1 libuv1
+  libxml2 tzdata
+0 upgraded, 20 newly installed, 0 to remove and 0 not upgraded.
+Need to get 13.1 MB of archives.
+After this operation, 51.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2024b-0ubuntu0.20.04.1 [299 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libicu66 amd64 66.1-2ubuntu2.1 [8515 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjson-c4 amd64 0.13.1+dfsg-7ubuntu0.3 [29.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.24 [1323 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.9 [641 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5support0 amd64 1.17-6ubuntu4.9 [31.3 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libk5crypto3 amd64 1.17-6ubuntu4.9 [80.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkeyutils1 amd64 1.6-6ubuntu1.1 [10.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5-3 amd64 1.17-6ubuntu4.9 [330 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgssapi-krb5-2 amd64 1.17-6ubuntu4.9 [121 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 liblmdb0 amd64 0.9.24-1 [44.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmaxminddb0 amd64 1.4.2-0ubuntu1.20.04.1 [26.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnghttp2-14 amd64 1.40.0-1ubuntu0.3 [79.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libuv1 amd64 1.34.2-1ubuntu1.5 [80.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-libs amd64 1:9.18.30-0ubuntu0.20.04.2 [1155 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-host amd64 1:9.18.30-0ubuntu0.20.04.2 [47.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libedit2 amd64 3.1-20191231-1 [87.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 bind9-dnsutils amd64 1:9.18.30-0ubuntu0.20.04.2 [142 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 krb5-locales all 1.17-6ubuntu4.9 [11.8 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 dnsutils all 1:9.18.30-0ubuntu0.20.04.2 [4056 B]
+Fetched 13.1 MB in 0s (57.7 MB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package tzdata.
+(Reading database ... 4352 files and directories currently installed.)
+Preparing to unpack .../00-tzdata_2024b-0ubuntu0.20.04.1_all.deb ...
+Unpacking tzdata (2024b-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libicu66:amd64.
+Preparing to unpack .../01-libicu66_66.1-2ubuntu2.1_amd64.deb ...
+Unpacking libicu66:amd64 (66.1-2ubuntu2.1) ...
+Selecting previously unselected package libjson-c4:amd64.
+Preparing to unpack .../02-libjson-c4_0.13.1+dfsg-7ubuntu0.3_amd64.deb ...
+Unpacking libjson-c4:amd64 (0.13.1+dfsg-7ubuntu0.3) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../03-libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.24) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../04-libxml2_2.9.10+dfsg-5ubuntu0.20.04.9_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.9) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../05-libkrb5support0_1.17-6ubuntu4.9_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.17-6ubuntu4.9) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../06-libk5crypto3_1.17-6ubuntu4.9_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.17-6ubuntu4.9) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../07-libkeyutils1_1.6-6ubuntu1.1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6ubuntu1.1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../08-libkrb5-3_1.17-6ubuntu4.9_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.17-6ubuntu4.9) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../09-libgssapi-krb5-2_1.17-6ubuntu4.9_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.17-6ubuntu4.9) ...
+Selecting previously unselected package liblmdb0:amd64.
+Preparing to unpack .../10-liblmdb0_0.9.24-1_amd64.deb ...
+Unpacking liblmdb0:amd64 (0.9.24-1) ...
+Selecting previously unselected package libmaxminddb0:amd64.
+Preparing to unpack .../11-libmaxminddb0_1.4.2-0ubuntu1.20.04.1_amd64.deb ...
+Unpacking libmaxminddb0:amd64 (1.4.2-0ubuntu1.20.04.1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../12-libnghttp2-14_1.40.0-1ubuntu0.3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.40.0-1ubuntu0.3) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../13-libuv1_1.34.2-1ubuntu1.5_amd64.deb ...
+Unpacking libuv1:amd64 (1.34.2-1ubuntu1.5) ...
+Selecting previously unselected package bind9-libs:amd64.
+Preparing to unpack .../14-bind9-libs_1%3a9.18.30-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.18.30-0ubuntu0.20.04.2) ...
+Selecting previously unselected package bind9-host.
+Preparing to unpack .../15-bind9-host_1%3a9.18.30-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking bind9-host (1:9.18.30-0ubuntu0.20.04.2) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../16-libedit2_3.1-20191231-1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20191231-1) ...
+Selecting previously unselected package bind9-dnsutils.
+Preparing to unpack .../17-bind9-dnsutils_1%3a9.18.30-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.18.30-0ubuntu0.20.04.2) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../18-krb5-locales_1.17-6ubuntu4.9_all.deb ...
+Unpacking krb5-locales (1.17-6ubuntu4.9) ...
+Selecting previously unselected package dnsutils.
+Preparing to unpack .../19-dnsutils_1%3a9.18.30-0ubuntu0.20.04.2_all.deb ...
+Unpacking dnsutils (1:9.18.30-0ubuntu0.20.04.2) ...
+Setting up liblmdb0:amd64 (0.9.24-1) ...
+Setting up libkeyutils1:amd64 (1.6-6ubuntu1.1) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.24) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libmaxminddb0:amd64 (1.4.2-0ubuntu1.20.04.1) ...
+Setting up libedit2:amd64 (3.1-20191231-1) ...
+Setting up libnghttp2-14:amd64 (1.40.0-1ubuntu0.3) ...
+Setting up krb5-locales (1.17-6ubuntu4.9) ...
+Setting up libkrb5support0:amd64 (1.17-6ubuntu4.9) ...
+Setting up tzdata (2024b-0ubuntu0.20.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent
+configuration questions will narrow this down by presenting a list of
+cities, representing the time zones in which they are located.
+
+  1. Africa      4. Australia  7. Atlantic  10. Pacific  13. Etc
+  2. America     5. Arctic     8. Europe    11. SystemV  14. Legacy
+  3. Antarctica  6. Asia       9. Indian    12. US
+Geographic area: 6
+
+Please select the city or region corresponding to your time zone.
+
+  1. Aden         24. Dubai         47. Kuching       70. Shanghai
+  2. Almaty       25. Dushanbe      48. Kuwait        71. Singapore
+  3. Amman        26. Famagusta     49. Macau         72. Srednekolymsk
+  4. Anadyr       27. Gaza          50. Magadan       73. Taipei
+  5. Aqtau        28. Harbin        51. Makassar      74. Tashkent
+  6. Aqtobe       29. Hebron        52. Manila        75. Tbilisi
+  7. Ashgabat     30. Ho_Chi_Minh   53. Muscat        76. Tehran
+  8. Atyrau       31. Hong_Kong     54. Nicosia       77. Tel_Aviv
+  9. Baghdad      32. Hovd          55. Novokuznetsk  78. Thimphu
+  10. Bahrain     33. Irkutsk       56. Novosibirsk   79. Tokyo
+  11. Baku        34. Istanbul      57. Omsk          80. Tomsk
+  12. Bangkok     35. Jakarta       58. Oral          81. Ujung_Pandang
+  13. Barnaul     36. Jayapura      59. Phnom_Penh    82. Ulaanbaatar
+  14. Beirut      37. Jerusalem     60. Pontianak     83. Urumqi
+  15. Bishkek     38. Kabul         61. Pyongyang     84. Ust-Nera
+  16. Brunei      39. Kamchatka     62. Qatar         85. Vientiane
+  17. Chita       40. Karachi       63. Qostanay      86. Vladivostok
+  18. Choibalsan  41. Kashgar       64. Qyzylorda     87. Yakutsk
+  19. Chongqing   42. Kathmandu     65. Rangoon       88. Yangon
+  20. Colombo     43. Khandyga      66. Riyadh        89. Yekaterinburg
+  21. Damascus    44. Kolkata       67. Sakhalin      90. Yerevan
+  22. Dhaka       45. Krasnoyarsk   68. Samarkand
+  23. Dili        46. Kuala_Lumpur  69. Seoul
+Time zone: Novosibirsk
+
+
+Current default time zone: 'Asia/Novosibirsk'
+Local time is now:      Thu Mar 20 13:27:30 +07 2025.
+Universal Time is now:  Thu Mar 20 06:27:30 UTC 2025.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libuv1:amd64 (1.34.2-1ubuntu1.5) ...
+Setting up libk5crypto3:amd64 (1.17-6ubuntu4.9) ...
+Setting up libkrb5-3:amd64 (1.17-6ubuntu4.9) ...
+Setting up libjson-c4:amd64 (0.13.1+dfsg-7ubuntu0.3) ...
+Setting up libicu66:amd64 (66.1-2ubuntu2.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.17-6ubuntu4.9) ...
+Setting up libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.9) ...
+Setting up bind9-libs:amd64 (1:9.18.30-0ubuntu0.20.04.2) ...
+Setting up bind9-host (1:9.18.30-0ubuntu0.20.04.2) ...
+Setting up bind9-dnsutils (1:9.18.30-0ubuntu0.20.04.2) ...
+Setting up dnsutils (1:9.18.30-0ubuntu0.20.04.2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.17) ...
+root@b9e352ff06d4:/# ocker commit -m -a ^C
+root@b9e352ff06d4:/# docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a6
+3c2 <failmlbb:20.04>
+bash: syntax error near unexpected token `newline'
+root@b9e352ff06d4:/# docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <failmlbb:20.04>
+bash: syntax error near unexpected token `newline'
+root@b9e352ff06d4:/# docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <ubuntu:20.04>
+bash: syntax error near unexpected token `newline'
+root@b9e352ff06d4:/# docker history
+bash: docker: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ docker inspect
+"docker inspect" requires at least 1 argument.
+See 'docker inspect --help'.
+
+Usage:  docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+Return low-level information on Docker objects
+@Failmlbb ➜ /workspaces/-02 (main) $ docker inspect c8cb345c3b47
+[
+    {
+        "Id": "sha256:c8cb345c3b47d0fae4c3c848c042f747351cd9443ce0cd42a5cebc0ea1c09d57",
+        "RepoTags": [
+            "failmlbb:20.04"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:6013ae1a63c2ee58a8949f03c6366a3ef6a2f386a7db27d86de2de965e9f450b",
+        "Comment": "installation apt upgrade",
+        "Created": "2025-03-20T06:45:21.528837874Z",
+        "DockerVersion": "27.3.1-1",
+        "Author": "fail",
+        "Config": {
+            "Hostname": "b9e352ff06d4",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Image": "6013ae1a63c2",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "20.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 201734711,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/cad06f4bcca7459f64458a3bb8e4042c54e36a0c87e4f94ca6a0d52a83ea1a92/diff",
+                "MergedDir": "/var/lib/docker/overlay2/663ad96d9c74acd5b3b2b7956b67837c795236de2745040902136a142629add9/merged",
+                "UpperDir": "/var/lib/docker/overlay2/663ad96d9c74acd5b3b2b7956b67837c795236de2745040902136a142629add9/diff",
+                "WorkDir": "/var/lib/docker/overlay2/663ad96d9c74acd5b3b2b7956b67837c795236de2745040902136a142629add9/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:fffe76c64ef2dee2d80a8bb3ad13d65d596d04a45510b1956a976a69215dae92",
+                "sha256:f14c9fe3cd0ee21cc54dc6037bd8552bd987ed5f8651006b166957167aee605c"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2025-03-20T06:45:21.537785855Z"
+        }
+    }
+]
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+6e909acdb790: Pull complete 
+fec99121872b: Pull complete 
+133acbc970df: Pull complete 
+e02d97322fc6: Pull complete 
+db9643c6baf3: Pull complete 
+9bcedd9434e7: Pull complete 
+fc8982ec96d9: Pull complete 
+1824bd6b75d7: Pull complete 
+fbad2bf2d5e6: Pull complete 
+221788d72606: Pull complete 
+e5f43b682bc0: Pull complete 
+e7a2d9e24ab0: Pull complete 
+a96cb29b0d13: Pull complete 
+140970538145: Pull complete 
+Digest: sha256:7f29c02ba9eeff4de9a9f414d803faa0e6fe5e8d15ebe217e3e418c82e652b35
+Status: Downloaded newer image for postgres:latest
+docker.io/library/postgres:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -d postgres
+71239c906ee2b4e12e9dc16f81b6192f91c34ad82ea5261b6388d345c7ecc515
+@Failmlbb ➜ /workspaces/-02 (main) $ docker imeges
+docker: 'imeges' is not a docker command.
+See 'docker --help'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker imsges
+docker: 'imsges' is not a docker command.
+See 'docker --help'
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+failmlbb     20.04     0c2f582f0696   7 minutes ago    202MB
+<none>       <none>    c8cb345c3b47   33 minutes ago   202MB
+postgres     latest    76e3e031d245   3 weeks ago      438MB
+ubuntu       latest    a04dc4851cbc   7 weeks ago      78.1MB
+mysql        latest    fa262c3a6564   8 weeks ago      797MB
+ubuntu       20.04     6013ae1a63c2   5 months ago     72.8MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps 76e3e031d245
+"docker ps" accepts no arguments.
+See 'docker ps --help'.
+
+Usage:  docker ps [OPTIONS]
+
+List containers
+@Failmlbb ➜ /workspaces/-02 (main) $ docker logs 76e3e031d245
+Error response from daemon: No such container: 76e3e031d245
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it
