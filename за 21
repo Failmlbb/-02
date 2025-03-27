@@ -1,0 +1,641 @@
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull openjdk
+Using default tag: latest
+latest: Pulling from library/openjdk
+197c1adcd755: Pull complete 
+57b698b7af4b: Pull complete 
+95a27dbe0150: Pull complete 
+Digest: sha256:9b448de897d211c9e0ec635a485650aed6e28d4eca1efbc34940560a480b3f1f
+Status: Downloaded newer image for openjdk:latest
+docker.io/library/openjdk:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull openjd
+Using default tag: latest
+Error response from daemon: pull access denied for openjd, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull mysql
+Using default tag: latest
+latest: Pulling from library/mysql
+804bb8ae89de: Pull complete 
+1b515e7ceb69: Pull complete 
+eaa11c0a9f08: Pull complete 
+8d18181893b8: Pull complete 
+e0a910cc8604: Pull complete 
+bc0c792ca096: Pull complete 
+8d73d2a73425: Pull complete 
+4a7e00d873b9: Pull complete 
+27a2553d6a80: Pull complete 
+69e76254f502: Pull complete 
+Digest: sha256:9b9d0aab4860798acff13d2a0ece3bc26639fe18b83fa5cd3e3d0e16b3ed05dd
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull ubuntu 20.04
+"docker pull" requires exactly 1 argument.
+See 'docker pull --help'.
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Download an image from a registry
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+d9802f032d67: Pull complete 
+Digest: sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b
+Status: Downloaded newer image for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull mariadb
+Using default tag: latest
+latest: Pulling from library/mariadb
+5a7813e071bf: Pull complete 
+bdecd990c29c: Pull complete 
+5db80086e4da: Pull complete 
+901fe9394c00: Pull complete 
+43eb19e1b102: Pull complete 
+597f7afe50fe: Pull complete 
+e1dede558384: Pull complete 
+5c3a22df929b: Pull complete 
+Digest: sha256:310d29fbb58169dcddb384b0ff138edb081e2773d6e2eceb976b3668089f2f84
+Status: Downloaded newer image for mariadb:latest
+docker.io/library/mariadb:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ postgres
+bash: postgres: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+6e909acdb790: Pull complete 
+fec99121872b: Pull complete 
+133acbc970df: Pull complete 
+e02d97322fc6: Pull complete 
+db9643c6baf3: Pull complete 
+9bcedd9434e7: Pull complete 
+fc8982ec96d9: Pull complete 
+1824bd6b75d7: Pull complete 
+fbad2bf2d5e6: Pull complete 
+221788d72606: Pull complete 
+e5f43b682bc0: Pull complete 
+e7a2d9e24ab0: Pull complete 
+a96cb29b0d13: Pull complete 
+140970538145: Pull complete 
+Digest: sha256:7f29c02ba9eeff4de9a9f414d803faa0e6fe5e8d15ebe217e3e418c82e652b35
+Status: Downloaded newer image for postgres:latest
+docker.io/library/postgres:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull ^V^C
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull php
+Using default tag: latest
+latest: Pulling from library/php
+6e909acdb790: Already exists 
+a843a84fd431: Pull complete 
+46f6a7fc8e67: Pull complete 
+d0177042fc93: Pull complete 
+46390c1686de: Pull complete 
+4764feada775: Pull complete 
+d46a93356f6d: Pull complete 
+148cff309ee1: Pull complete 
+39784e77cb58: Pull complete 
+Digest: sha256:f9410ffdc12c9ab0b6c390a56e46a13ef58558f7c2abda1bc1bb3291a7d57452
+Status: Downloaded newer image for php:latest
+docker.io/library/php:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull phpmyadmin
+Using default tag: latest
+latest: Pulling from library/phpmyadmin
+6e909acdb790: Already exists 
+5db2c4b6137b: Pulling fs layer 
+dacb60b59038: Pulling fs layer 
+64450047668b: Pulling fs layer 
+4d6386e035f7: Waiting 
+e4ca7ebe0914: Pull complete 
+3dc5d9089396: Pull complete 
+1778f52baa09: Pull complete 
+a5d9cb1c80ec: Pull complete 
+b116c8459f57: Pull complete 
+8f8ddda3587a: Pull complete 
+f432ea27fc70: Pull complete 
+6a5a37a900f3: Pull complete 
+4f4fb700ef54: Pull complete 
+2356864ac4b9: Pull complete 
+28fa232eddfc: Pull complete 
+a084403b2fe2: Pull complete 
+69286ddc9ea5: Pull complete 
+21d6bc6af9fd: Pull complete 
+5fb8db322bbb: Pull complete 
+Digest: sha256:6cb0a7146734b59c8ca4f450ce7bde9f518e36b10558af75fc36591cbea1d5cc
+Status: Downloaded newer image for phpmyadmin:latest
+docker.io/library/phpmyadmin:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull httpd
+Using default tag: latest
+latest: Pulling from library/httpd
+6e909acdb790: Already exists 
+9f9b03a66afb: Pull complete 
+4f4fb700ef54: Pull complete 
+09bf08b13dbd: Pull complete 
+084c58879b9a: Pull complete 
+c61868f0ad74: Pull complete 
+Digest: sha256:391a8eb0c1ed464163da46099606a5ec293705118f3054d6c60f5957e2485bd0
+Status: Downloaded newer image for httpd:latest
+docker.io/library/httpd:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+6e909acdb790: Already exists 
+5eaa34f5b9c2: Pull complete 
+417c4bccf534: Pull complete 
+e7e0ca015e55: Pull complete 
+373fe654e984: Pull complete 
+97f5c0f51d43: Pull complete 
+c22eb46e871a: Pull complete 
+Digest: sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull alpine
+Using default tag: latest
+latest: Pulling from library/alpine
+f18232174bc9: Pull complete 
+Digest: sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c
+Status: Downloaded newer image for alpine:latest
+docker.io/library/alpine:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull redis
+Using default tag: latest
+latest: Pulling from library/redis
+6e909acdb790: Already exists 
+d9b98f603d6b: Pull complete 
+513666b05c81: Pull complete 
+764e7fbfdb05: Pull complete 
+2884ccae34c1: Pull complete 
+df4660a56a60: Pull complete 
+4f4fb700ef54: Pull complete 
+b138a3179b82: Pull complete 
+Digest: sha256:bd41d55aae1ecff61b2fafd0d66761223fe94a60373eb6bb781cfbb570a84079
+Status: Downloaded newer image for redis:latest
+docker.io/library/redis:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull python
+Using default tag: latest
+latest: Pulling from library/python
+7cd785773db4: Pull complete 
+091eb8249475: Pull complete 
+255774e0027b: Pull complete 
+353e14e5cc47: Pull complete 
+70847531e23d: Pull complete 
+af0b544b1a82: Pull complete 
+379f06e37dbb: Pull complete 
+Digest: sha256:8c55c44b9e81d537f8404d0000b7331863d134db87c1385dd0ec7fefff656495
+Status: Downloaded newer image for python:latest
+docker.io/library/python:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull wordpress
+Using default tag: latest
+latest: Pulling from library/wordpress
+6e909acdb790: Already exists 
+5db2c4b6137b: Already exists 
+dacb60b59038: Already exists 
+64450047668b: Already exists 
+4d6386e035f7: Already exists 
+e4ca7ebe0914: Already exists 
+3dc5d9089396: Already exists 
+1778f52baa09: Already exists 
+a5d9cb1c80ec: Already exists 
+b116c8459f57: Already exists 
+8f8ddda3587a: Already exists 
+f432ea27fc70: Already exists 
+6a5a37a900f3: Already exists 
+4f4fb700ef54: Already exists 
+57c6ea19af98: Pull complete 
+ae777a0ca433: Pull complete 
+5f19650adea9: Pull complete 
+177323f85a94: Pull complete 
+fe638a1d1db7: Pull complete 
+f4abcace8187: Pull complete 
+729bf49a9314: Pull complete 
+cac8b814902b: Pull complete 
+Digest: sha256:8b0ffd461bfaf8e74ab98481f45d1b2596986767faf2dc65bb47c875076f8a14
+Status: Downloaded newer image for wordpress:latest
+docker.io/library/wordpress:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull tomcat
+Using default tag: latest
+latest: Pulling from library/tomcat
+5a7813e071bf: Already exists 
+8dbbbc6af9dc: Pull complete 
+a10b6847b9f1: Pull complete 
+dcc1c5ea3c7d: Pull complete 
+91e6cc55403a: Pull complete 
+5d4660d0a9e9: Pull complete 
+4f4fb700ef54: Pull complete 
+e231914ca483: Pull complete 
+Digest: sha256:1374a565d5122fdb42807f3a5f2d4fcc245a5e15420ff5bb5123afedc8ef769d
+Status: Downloaded newer image for tomcat:latest
+docker.io/library/tomcat:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull adminer
+Using default tag: latest
+latest: Pulling from library/adminer
+f18232174bc9: Already exists 
+bf6feb845014: Pull complete 
+7bbf97ddef06: Pull complete 
+f2062318e97b: Pull complete 
+af6ac0368878: Pull complete 
+b708412c0939: Pull complete 
+abb8b8b95fbd: Pull complete 
+ee465e8b79c2: Pull complete 
+ac1960b6bc03: Pull complete 
+adb0e67536fe: Pull complete 
+f0059103cd19: Pull complete 
+4f4fb700ef54: Pull complete 
+68c1afd4116f: Pull complete 
+660d135f1f46: Pull complete 
+ee17837b9d2c: Pull complete 
+490b32bdc03a: Pull complete 
+Digest: sha256:82b68b3aad528d09d66ea4cb6930dbc5c8f44317a6bd9d952dcfb99ab00ae601
+Status: Downloaded newer image for adminer:latest
+docker.io/library/adminer:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull Joomla
+invalid reference format: repository name (library/Joomla) must be lowercase
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull Joomla
+invalid reference format: repository name (library/Joomla) must be lowercase
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull joomla
+Using default tag: latest
+latest: Pulling from library/joomla
+6e909acdb790: Already exists 
+9439b75f7025: Pulling fs layer 
+480b11587afc: Pulling fs layer 
+21ac9628630d: Pulling fs layer 
+83e70aea67e7: Pulling fs layer 
+e1a7f56a8819: Pulling fs layer 
+108ebd4ec1f6: Pulling fs layer 
+a022dc65d674: Pull complete 
+fb1cccd7bd4c: Pull complete 
+9a3a4deb9512: Pull complete 
+2c68f3c3dfb5: Pull complete 
+f4ed2fe59b45: Pull complete 
+6451280804a1: Pull complete 
+4f4fb700ef54: Pull complete 
+ff83add17dab: Pull complete 
+619ccf030404: Pull complete 
+7d8c442e04a8: Pull complete 
+eb65bf13737d: Pull complete 
+becef2fd8a26: Pull complete 
+02e94d850989: Pull complete 
+e05630d73eff: Pull complete 
+351d921b8e20: Pull complete 
+Digest: sha256:f8ef95ae126a8123bd3b8c12e2c2a4d5e547b1dfd6a52cb2c09b9f13dd2e3a6b
+Status: Downloaded newer image for joomla:latest
+docker.io/library/joomla:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker search --filter stars=50 mysql
+NAME                  DESCRIPTION                                     STARS     OFFICIAL
+mysql                 MySQL is a widely used, open-source relation…   15709     [OK]
+bitnami/mysql         Bitnami container image for MySQL               133       
+ubuntu/mysql          MySQL open source fast, stable, multi-thread…   67        
+mysql/mysql-server    Optimized MySQL Server Docker images. Create…   1026      
+mysql/mysql-cluster   Experimental MySQL Cluster Docker images. Cr…   100       
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it ubuntu sh
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+5a7813e071bf: Already exists 
+Digest: sha256:72297848456d5d37d1262630108ab308d3e9ec7ed1c3286a32fe09856619a782
+Status: Downloaded newer image for ubuntu:latest
+# apt update
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1006 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB] 
+Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [886 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [26.5 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1064 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]               
+Get:12 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1068 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1219 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [26.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1354 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [30.9 kB]
+Fetched 28.9 MB in 2s (12.5 MB/s)                          
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+18 packages can be upgraded. Run 'apt list --upgradable' to see them.
+# apt update
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+18 packages can be upgraded. Run 'apt list --upgradable' to see them.
+# apt install iproute2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libatm1t64 libbpf1 libcap2 libcap2-bin libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common libtirpc3t64
+  libxtables12
+Suggested packages:
+  iproute2-doc python3:any krb5-doc krb5-user
+The following NEW packages will be installed:
+  iproute2 krb5-locales libatm1t64 libbpf1 libcap2-bin libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common libtirpc3t64
+  libxtables12
+The following packages will be upgraded:
+  libcap2
+1 upgraded, 16 newly installed, 0 to remove and 17 not upgraded.
+Need to get 2212 kB of archives.
+After this operation, 6480 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcap2 amd64 1:2.66-5ubuntu2.2 [30.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpf1 amd64 1:1.3.0-2build2 [166 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libmnl0 amd64 1.0.5-2build1 [12.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.5 [34.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.5 [82.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.5 [347 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.5 [143 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libtirpc-common all 1.3.4+ds-1.1build1 [8094 B]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libtirpc3t64 amd64 1.3.4+ds-1.1build1 [82.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libxtables12 amd64 1.8.10-3ubuntu2 [35.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcap2-bin amd64 1:2.66-5ubuntu2.2 [34.2 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 iproute2 amd64 6.1.0-1ubuntu6 [1120 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.5 [14.5 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libatm1t64 amd64 1:2.5.1-5.1build1 [22.9 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-cap amd64 1:2.66-5ubuntu2.2 [12.5 kB]
+Fetched 2212 kB in 0s (21.7 MB/s)   
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... 4383 files and directories currently installed.)
+Preparing to unpack .../libcap2_1%3a2.66-5ubuntu2.2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.66-5ubuntu2.2) over (1:2.66-5ubuntu2) ...
+Setting up libcap2:amd64 (1:2.66-5ubuntu2.2) ...
+Selecting previously unselected package libelf1t64:amd64.
+(Reading database ... 4383 files and directories currently installed.)
+Preparing to unpack .../00-libelf1t64_0.190-1.1ubuntu0.1_amd64.deb ...
+Unpacking libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+Selecting previously unselected package libbpf1:amd64.
+Preparing to unpack .../01-libbpf1_1%3a1.3.0-2build2_amd64.deb ...
+Unpacking libbpf1:amd64 (1:1.3.0-2build2) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../02-libmnl0_1.0.5-2build1_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.5-2build1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../03-libkrb5support0_1.20.1-6ubuntu2.5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../04-libk5crypto3_1.20.1-6ubuntu2.5_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../05-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../06-libkrb5-3_1.20.1-6ubuntu2.5_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../07-libgssapi-krb5-2_1.20.1-6ubuntu2.5_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libtirpc-common.
+Preparing to unpack .../08-libtirpc-common_1.3.4+ds-1.1build1_all.deb ...
+Unpacking libtirpc-common (1.3.4+ds-1.1build1) ...
+Selecting previously unselected package libtirpc3t64:amd64.
+Preparing to unpack .../09-libtirpc3t64_1.3.4+ds-1.1build1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3 to /lib/x86_64-linux-gnu/libtirpc.so.3.usr-is-merged by libtirpc3t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3.0.0 to /lib/x86_64-linux-gnu/libtirpc.so.3.0.0.usr-is-merged by libtirpc3t64'
+Unpacking libtirpc3t64:amd64 (1.3.4+ds-1.1build1) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../10-libxtables12_1.8.10-3ubuntu2_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.10-3ubuntu2) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../11-libcap2-bin_1%3a2.66-5ubuntu2.2_amd64.deb ...
+Unpacking libcap2-bin (1:2.66-5ubuntu2.2) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../12-iproute2_6.1.0-1ubuntu6_amd64.deb ...
+Unpacking iproute2 (6.1.0-1ubuntu6) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../13-krb5-locales_1.20.1-6ubuntu2.5_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.5) ...
+Selecting previously unselected package libatm1t64:amd64.
+Preparing to unpack .../14-libatm1t64_1%3a2.5.1-5.1build1_amd64.deb ...
+Unpacking libatm1t64:amd64 (1:2.5.1-5.1build1) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../15-libpam-cap_1%3a2.66-5ubuntu2.2_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.66-5ubuntu2.2) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libatm1t64:amd64 (1:2.5.1-5.1build1) ...
+Setting up libtirpc-common (1.3.4+ds-1.1build1) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.5) ...
+Setting up libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.5) ...
+Setting up libcap2-bin (1:2.66-5ubuntu2.2) ...
+Setting up libmnl0:amd64 (1.0.5-2build1) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.5) ...
+Setting up libxtables12:amd64 (1.8.10-3ubuntu2) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.5) ...
+Setting up libpam-cap:amd64 (1:2.66-5ubuntu2.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Setting up libbpf1:amd64 (1:1.3.0-2build2) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.5) ...
+Setting up libtirpc3t64:amd64 (1.3.4+ds-1.1build1) ...
+Setting up iproute2 (6.1.0-1ubuntu6) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+# apt install iputils-ping
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  iputils-ping
+0 upgraded, 1 newly installed, 0 to remove and 17 not upgraded.
+Need to get 44.3 kB of archives.
+After this operation, 124 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 iputils-ping amd64 3:20240117-1build1 [44.3 kB]
+Fetched 44.3 kB in 0s (127 kB/s)       
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package iputils-ping.
+(Reading database ... 4675 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20240117-1build1_amd64.deb ...
+Unpacking iputils-ping (3:20240117-1build1) ...
+Setting up iputils-ping (3:20240117-1build1) ...
+# apt install dnsutils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bind9-dnsutils bind9-host bind9-libs libbsd0 libedit2 libicu74 libjson-c5 liblmdb0 libmaxminddb0 libnghttp2-14 libuv1t64 libxml2
+Suggested packages:
+  mmdb-bin
+The following NEW packages will be installed:
+  bind9-dnsutils bind9-host bind9-libs dnsutils libbsd0 libedit2 libicu74 libjson-c5 liblmdb0 libmaxminddb0 libnghttp2-14 libuv1t64 libxml2
+0 upgraded, 13 newly installed, 0 to remove and 17 not upgraded.
+Need to get 13.5 MB of archives.
+After this operation, 44.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-c5 amd64 0.17-1build1 [35.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.2 [763 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libuv1t64 amd64 1.48.0-1.1build1 [97.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 liblmdb0 amd64 0.9.31-1build1 [48.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libmaxminddb0 amd64 1.9.1-1build1 [24.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-libs amd64 1:9.18.30-0ubuntu0.24.04.2 [1253 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-host amd64 1:9.18.30-0ubuntu0.24.04.2 [50.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-dnsutils amd64 1:9.18.30-0ubuntu0.24.04.2 [155 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 dnsutils all 1:9.18.30-0ubuntu0.24.04.2 [3682 B]
+Fetched 13.5 MB in 0s (70.8 MB/s)         
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... 4684 files and directories currently installed.)
+Preparing to unpack .../00-libbsd0_0.12.1-1build1.1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.12.1-1build1.1) ...
+Selecting previously unselected package libicu74:amd64.
+Preparing to unpack .../01-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libjson-c5:amd64.
+Preparing to unpack .../02-libjson-c5_0.17-1build1_amd64.deb ...
+Unpacking libjson-c5:amd64 (0.17-1build1) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../03-libxml2_2.9.14+dfsg-1.3ubuntu3.2_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.2) ...
+Selecting previously unselected package libuv1t64:amd64.
+Preparing to unpack .../04-libuv1t64_1.48.0-1.1build1_amd64.deb ...
+Unpacking libuv1t64:amd64 (1.48.0-1.1build1) ...
+Selecting previously unselected package liblmdb0:amd64.
+Preparing to unpack .../05-liblmdb0_0.9.31-1build1_amd64.deb ...
+Unpacking liblmdb0:amd64 (0.9.31-1build1) ...
+Selecting previously unselected package libmaxminddb0:amd64.
+Preparing to unpack .../06-libmaxminddb0_1.9.1-1build1_amd64.deb ...
+Unpacking libmaxminddb0:amd64 (1.9.1-1build1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../07-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package bind9-libs:amd64.
+Preparing to unpack .../08-bind9-libs_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.18.30-0ubuntu0.24.04.2) ...
+Selecting previously unselected package bind9-host.
+Preparing to unpack .../09-bind9-host_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-host (1:9.18.30-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../10-libedit2_3.1-20230828-1build1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20230828-1build1) ...
+Selecting previously unselected package bind9-dnsutils.
+Preparing to unpack .../11-bind9-dnsutils_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Selecting previously unselected package dnsutils.
+Preparing to unpack .../12-dnsutils_1%3a9.18.30-0ubuntu0.24.04.2_all.deb ...
+Unpacking dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up liblmdb0:amd64 (0.9.31-1build1) ...
+Setting up libmaxminddb0:amd64 (1.9.1-1build1) ...
+Setting up libuv1t64:amd64 (1.48.0-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+Setting up libbsd0:amd64 (0.12.1-1build1.1) ...
+Setting up libjson-c5:amd64 (0.17-1build1) ...
+Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.2) ...
+Setting up bind9-libs:amd64 (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up libedit2:amd64 (3.1-20230828-1build1) ...
+Setting up bind9-host (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up bind9-dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+# ocker run -it b29d9865d2                              
+sh: 6: ocker: not found
+# docker run -it b29d9865d230
+sh: 7: docker: not found
+# exit
+@Failmlbb ➜ /workspaces/-02 (main) $ root ubuntu
+bash: root: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ docker image
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images -a
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+joomla       latest    29595f1bada0   5 days ago     760MB
+adminer      latest    d1ce2535a665   9 days ago     121MB
+php          latest    cd0e124311ea   13 days ago    547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago    519MB
+postgres     latest    76e3e031d245   4 weeks ago    438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago    336MB
+alpine       latest    aded1e1a5b37   5 weeks ago    7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago    701MB
+nginx        latest    53a18edff809   7 weeks ago    192MB
+python       latest    e6c8fe2e1108   7 weeks ago    1.02GB
+ubuntu       latest    a04dc4851cbc   8 weeks ago    78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago   570MB
+httpd        latest    83d938198316   2 months ago   148MB
+mysql        latest    fa262c3a6564   2 months ago   797MB
+redis        latest    ad4b31aa2de6   2 months ago   117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+openjdk      latest    71260f256d19   2 years ago    470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ apt update
+Reading package lists... Done
+E: List directory /var/lib/apt/lists/partial is missing. - Acquire (13: Permission denied)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+joomla       latest    29595f1bada0   5 days ago     760MB
+adminer      latest    d1ce2535a665   9 days ago     121MB
+php          latest    cd0e124311ea   13 days ago    547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago    519MB
+postgres     latest    76e3e031d245   4 weeks ago    438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago    336MB
+alpine       latest    aded1e1a5b37   5 weeks ago    7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago    701MB
+nginx        latest    53a18edff809   7 weeks ago    192MB
+python       latest    e6c8fe2e1108   7 weeks ago    1.02GB
+ubuntu       latest    a04dc4851cbc   8 weeks ago    78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago   570MB
+httpd        latest    83d938198316   2 months ago   148MB
+mysql        latest    fa262c3a6564   2 months ago   797MB
+redis        latest    ad4b31aa2de6   2 months ago   117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+openjdk      latest    71260f256d19   2 years ago    470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it 6013ae1a63c2
+root@06350d1a8e37:/# apt update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [33.2 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [4483 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1304 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [4289 kB]     
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]              
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [4776 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [4681 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1597 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [36.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+Fetched 34.8 MB in 3s (13.5 MB/s)                           
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@06350d1a8e37:/#  docker commit -m "installation apt upgrade, apt install iproute2, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <ubuntu:20.04>
+bash: syntax error near unexpected token `newline'
+root@06350d1a8e37:/#  docker commit -m "installation apt upgrade, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <ubuntu:20.04> 
+bash: syntax error near unexpected token `newline'
+root@06350d1a8e37:/# ^C
+root@06350d1a8e37:/# 
