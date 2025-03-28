@@ -637,5 +637,686 @@ root@06350d1a8e37:/#  docker commit -m "installation apt upgrade, apt install ip
 bash: syntax error near unexpected token `newline'
 root@06350d1a8e37:/#  docker commit -m "installation apt upgrade, apt install iputils-ping, apt install dnsutils" -a "fail" 6013ae1a63c2 <ubuntu:20.04> 
 bash: syntax error near unexpected token `newline'
-root@06350d1a8e37:/# ^C
-root@06350d1a8e37:/# 
+@Failmlbb ➜ /workspaces/-02 (main) $ docker imeges -a
+unknown shorthand flag: 'a' in -a
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Authenticate to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/codespace/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/codespace/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/codespace/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/codespace/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images -a
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+joomla       latest    29595f1bada0   6 days ago     760MB
+adminer      latest    d1ce2535a665   10 days ago    121MB
+php          latest    cd0e124311ea   2 weeks ago    547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago    519MB
+postgres     latest    76e3e031d245   4 weeks ago    438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago    336MB
+alpine       latest    aded1e1a5b37   6 weeks ago    7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago    701MB
+nginx        latest    53a18edff809   7 weeks ago    192MB
+python       latest    e6c8fe2e1108   7 weeks ago    1.02GB
+ubuntu       latest    a04dc4851cbc   2 months ago   78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago   570MB
+httpd        latest    83d938198316   2 months ago   148MB
+mysql        latest    fa262c3a6564   2 months ago   797MB
+redis        latest    ad4b31aa2de6   2 months ago   117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+openjdk      latest    71260f256d19   2 years ago    470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it 6013ae1a63c2
+root@ec6d099794af:/# exit
+exit
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run 6013ae1a63c2
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it 6013ae1a63c2
+root@c32b26d4b07e:/# 6013ae1a63c2
+bash: 6013ae1a63c2: command not found
+root@c32b26d4b07e:/# apt install dnsutils
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package dnsutils
+root@c32b26d4b07e:/# apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@c32b26d4b07e:/#  apt install iproute2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2
+root@c32b26d4b07e:/# apt install iproute2,
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package iproute2,
+root@c32b26d4b07e:/# postgres
+bash: postgres: command not found
+root@c32b26d4b07e:/# exit
+exit
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it 76e3e031d245
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d mysql
+3c7901ce3c7921aca393645eff17b2ba7d3818b673dd895cf89a43c56f1ad5db
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run --name postgres-container -e POSTGRES_PASSWORD=root -d postgres
+3fcdd9bfbb248baa31b3b7bf4a9f103269f989eabe34eddec583e6109d85cdc4
+@Failmlbb ➜ /workspaces/-02 (main) $  docker run -it -p 3306:3306 fa262c3a6564
+2025-03-28 05:57:17+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-28 05:57:17+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-03-28 05:57:17+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-28 05:57:18+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+@Failmlbb ➜ /workspaces/-02 (main) $ MYSQL_ROOT_PASSWORD
+bash: MYSQL_ROOT_PASSWORD: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ mysql password 
+bash: mysql: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ ALTER USER 'root'@'localhost' IDENTIFIED BY 'New_Password'
+bash: ALTER: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ SET PASSWORD FOR 'root'@'localhost' = PASSWORD('New_Password')
+bash: syntax error near unexpected token `('
+@Failmlbb ➜ /workspaces/-02 (main) $ 1234
+bash: 1234: command not found
+@Failmlbb ➜ /workspaces/-02 (main) $ mysql -h <mysql-container IP> -u root -p
+bash: mysql-container: No such file or directory
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it fa262c3a6564
+2025-03-28 06:05:08+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-28 06:05:09+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-03-28 06:05:09+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.2.0-1.el9 started.
+2025-03-28 06:05:09+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -it -p 5432:5432 76e3e031d245
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_PASSWORD=1234
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_123
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_PASSWORD123
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run POSTGRES_PASSWORD=12345
+docker: invalid reference format: repository name (library/POSTGRES_PASSWORD=12345) must be lowercase.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run POSTGRES_PASSWORD=1234567890
+docker: invalid reference format: repository name (library/POSTGRES_PASSWORD=1234567890) must be lowercase.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run POSTGRES_PASSWORD=1234567890 -d 76e3e031d245
+docker: invalid reference format: repository name (library/POSTGRES_PASSWORD=1234567890) must be lowercase.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e POSTGRES_PASSWORD=1234567890 -d 76e3e031d245
+d237f1ca6a82bc998cfc608644495e77de5bfd8647084cdda641f28cc9c8bd23
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   19 seconds ago   Up 18 seconds   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   17 minutes ago   Up 17 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   17 minutes ago   Up 17 minutes   3306/tcp, 33060/tcp   mysql-container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker rm postgres
+Error response from daemon: No such container: postgres
+@Failmlbb ➜ /workspaces/-02 (main) $ docker rm 3fcdd9bfbb24
+Error response from daemon: cannot remove container "/postgres-container": container is running: stop the container before removing or force remove
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_PASSWORD123 -d fa262c3a6564
+37fda9e662c0f35055964bdf41572f6ebe7ec1602d2aeec67af3a5655d77583f
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql_container mysql -p
+Error response from daemon: No such container: mysql_container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it MYSQL_CONTAINER MYSQL -p
+Error response from daemon: No such container: MYSQL_CONTAINER
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it MYSQL_CONTAINER mysql -p
+Error response from daemon: No such container: MYSQL_CONTAINER
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -IT MYSQL_CONTAINER mysql -p
+unknown shorthand flag: 'I' in -IT
+See 'docker exec --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec --help
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+
+Aliases:
+  docker container exec, docker exec
+
+Options:
+  -d, --detach               Detached mode: run command in the background
+      --detach-keys string   Override the key sequence for detaching a container
+  -e, --env list             Set environment variables
+      --env-file list        Read in a file of environment variables
+  -i, --interactive          Keep STDIN open even if not attached
+      --privileged           Give extended privileges to the command
+  -t, --tty                  Allocate a pseudo-TTY
+  -u, --user string          Username or UID (format: "<name|uid>[:<group|gid>]")
+  -w, --workdir string       Working directory inside the container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it losst_mysql /bin/bash
+Error response from daemon: No such container: losst_mysql
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql_container mysql -p
+Error response from daemon: No such container: mysql_container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql -p
+Error response from daemon: No such container: mysql
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   3306/tcp, 33060/tcp   mysql-container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql_container 3c7901ce3c79  -p
+Error response from daemon: No such container: mysql_container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   34 minutes ago   Up 34 minutes   3306/tcp, 33060/tcp   mysql-container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container mysql -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container mysql -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container mysql -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_PASSWORD=123 -d fa262c3a6564
+29c761d1c1233cb482197d48c98d18a8da1de7974843216847a81d5714b1e3f4
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container mysql -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker run -e MYSQL_ROOT_PASSWORD 123 -d fa262c3a6564
+\Unable to find image '123:latest' locally
+docker: Error response from daemon: pull access denied for 123, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container -u root -p
+OCI runtime exec failed: exec failed: unable to start container process: exec: "-u": executable file not found in $PATH: unknown
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it mysql-container mysql -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+29c761d1c123   fa262c3a6564   "docker-entrypoint.s…"   3 minutes ago    Up 3 minutes    3306/tcp, 33060/tcp   interesting_payne
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   23 minutes ago   Up 23 minutes   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   40 minutes ago   Up 40 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   40 minutes ago   Up 40 minutes   3306/tcp, 33060/tcp   mysql-container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it interesting_payne  fa262c3a6564 -u root -p
+OCI runtime exec failed: exec failed: unable to start container process: exec: "fa262c3a6564": executable file not found in $PATH: unknown
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it interesting_payne  mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 9.2.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE my_database;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| my_database        |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> docker pull phpmyadmin/phpmyadmin
+    -> docker run --name my_phpmyadmin -d --link interesting_payne:db -p 8080:80 phpmyadmin/phpmyadmin
+    -> exit
+    -> docker pull phpmyadmin/phpmyadmin;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'docker pull phpmyadmin/phpmyadmin
+docker run --name my_phpmyadmin -d --link inte' at line 1
+mysql> create database mydb
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| my_database        |
+| mydb               |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> mysql> help;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql> help' at line 1
+mysql> help;
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+edit      (\e) Edit command with $EDITOR.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+nopager   (\n) Disable pager, print to stdout.
+notee     (\t) Don't write into outfile.
+pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+system    (\!) Execute a system shell command, if enabled
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+resetconnection(\x) Clean session context.
+query_attributes Sets string parameters (name1 value1 name2 value2 ...) for the next query to pick up.
+ssl_session_data_print Serializes the current SSL session data to stdout or file
+
+For server side help, type 'help contents'
+
+mysql> use mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------------------------------------------+
+| Tables_in_mysql                                      |
++------------------------------------------------------+
+| columns_priv                                         |
+| component                                            |
+| db                                                   |
+| default_roles                                        |
+| engine_cost                                          |
+| func                                                 |
+| general_log                                          |
+| global_grants                                        |
+| gtid_executed                                        |
+| help_category                                        |
+| help_keyword                                         |
+| help_relation                                        |
+| help_topic                                           |
+| innodb_index_stats                                   |
+| innodb_table_stats                                   |
+| ndb_binlog_index                                     |
+| password_history                                     |
+| plugin                                               |
+| procs_priv                                           |
+| proxies_priv                                         |
+| replication_asynchronous_connection_failover         |
+| replication_asynchronous_connection_failover_managed |
+| replication_group_configuration_version              |
+| replication_group_member_actions                     |
+| role_edges                                           |
+| server_cost                                          |
+| servers                                              |
+| slave_master_info                                    |
+| slave_relay_log_info                                 |
+| slave_worker_info                                    |
+| slow_log                                             |
+| tables_priv                                          |
+| time_zone                                            |
+| time_zone_leap_second                                |
+| time_zone_name                                       |
+| time_zone_transition                                 |
+| time_zone_transition_type                            |
+| user                                                 |
++------------------------------------------------------+
+38 rows in set (0.00 sec)
+
+mysql> show columns from user;
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+| Field                    | Type                              | Null | Key | Default               | Extra |
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+| Host                     | char(255)                         | NO   | PRI |                       |       |
+| User                     | char(32)                          | NO   | PRI |                       |       |
+| Select_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Insert_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Update_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Delete_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Drop_priv                | enum('N','Y')                     | NO   |     | N                     |       |
+| Reload_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Shutdown_priv            | enum('N','Y')                     | NO   |     | N                     |       |
+| Process_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| File_priv                | enum('N','Y')                     | NO   |     | N                     |       |
+| Grant_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| References_priv          | enum('N','Y')                     | NO   |     | N                     |       |
+| Index_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Alter_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Show_db_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Super_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_tmp_table_priv    | enum('N','Y')                     | NO   |     | N                     |       |
+| Lock_tables_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Execute_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Repl_slave_priv          | enum('N','Y')                     | NO   |     | N                     |       |
+| Repl_client_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_view_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Show_view_priv           | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_routine_priv      | enum('N','Y')                     | NO   |     | N                     |       |
+| Alter_routine_priv       | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_user_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Event_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Trigger_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_tablespace_priv   | enum('N','Y')                     | NO   |     | N                     |       |
+| ssl_type                 | enum('','ANY','X509','SPECIFIED') | NO   |     |                       |       |
+| ssl_cipher               | blob                              | NO   |     | NULL                  |       |
+| x509_issuer              | blob                              | NO   |     | NULL                  |       |
+| x509_subject             | blob                              | NO   |     | NULL                  |       |
+| max_questions            | int unsigned                      | NO   |     | 0                     |       |
+| max_updates              | int unsigned                      | NO   |     | 0                     |       |
+| max_connections          | int unsigned                      | NO   |     | 0                     |       |
+| max_user_connections     | int unsigned                      | NO   |     | 0                     |       |
+| plugin                   | char(64)                          | NO   |     | caching_sha2_password |       |
+| authentication_string    | text                              | YES  |     | NULL                  |       |
+| password_expired         | enum('N','Y')                     | NO   |     | N                     |       |
+| password_last_changed    | timestamp                         | YES  |     | NULL                  |       |
+| password_lifetime        | smallint unsigned                 | YES  |     | NULL                  |       |
+| account_locked           | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_role_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Drop_role_priv           | enum('N','Y')                     | NO   |     | N                     |       |
+| Password_reuse_history   | smallint unsigned                 | YES  |     | NULL                  |       |
+| Password_reuse_time      | smallint unsigned                 | YES  |     | NULL                  |       |
+| Password_require_current | enum('N','Y')                     | YES  |     | NULL                  |       |
+| User_attributes          | json                              | YES  |     | NULL                  |       |
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+51 rows in set (0.00 sec)
+
+mysql> elect Host, User, User_attributes from user;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'elect Host, User, User_attributes from user' at line 1
+mysql> select Host, User, User_attributes from user;
++-----------+------------------+-----------------+
+| Host      | User             | User_attributes |
++-----------+------------------+-----------------+
+| %         | root             | NULL            |
+| localhost | mysql.infoschema | NULL            |
+| localhost | mysql.session    | NULL            |
+| localhost | mysql.sys        | NULL            |
+| localhost | root             | NULL            |
++-----------+------------------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE mydatabase;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypassword';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user 'fail'@'%' identified by '123';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on fail.* to 'fail'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> use fail
+ERROR 1049 (42000): Unknown database 'fail'
+mysql> database fail 
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database fail' at line 1
+mysql> database failmlbb;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database failmlbb' at line 1
+mysql> create database fail
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> fected;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fected' at line 1
+mysql> fected
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fected' at line 1
+mysql> create user 'fail'@'%' identified by '123';
+ERROR 1396 (HY000): Operation CREATE USER failed for 'fail'@'%'
+mysql> ;
+ERROR: 
+No query specified
+
+mysql> create user 'fail'@'%' identified by '123';
+ERROR 1396 (HY000): Operation CREATE USER failed for 'fail'@'%'
+mysql> 
+@Failmlbb ➜ /workspaces/-02 (main) $ docker inspect
+"docker inspect" requires at least 1 argument.
+See 'docker inspect --help'.
+
+Usage:  docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+Return low-level information on Docker objects
+@Failmlbb ➜ /workspaces/-02 (main) $ docker inspect c8cb345c3b47
+[]
+Error: No such object: c8cb345c3b47
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade" -a "fail" b9e352ff06d4 failmlbb:20.04
+Error response from daemon: No such container: b9e352ff06d4
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND       CREATED         STATUS         PORTS     NAMES
+ec6d099794af   6013ae1a63c2   "/bin/bash"   6 minutes ago   Up 6 minutes             pedantic_chaplygin
+@Failmlbb ➜ /workspaces/-02 (main) $ docker commit -m "installation apt upgrade" -a "fail" ec6d099794af failmlbb:20.04
+sha256:63e4872f4c1c0abe4ed3eea1fb1c79eb5019f5dfedf47b52f03d34713381b529
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+failmlbb     20.04     63e4872f4c1c   44 seconds ago   72.8MB
+joomla       latest    29595f1bada0   6 days ago       760MB
+adminer      latest    d1ce2535a665   10 days ago      121MB
+php          latest    cd0e124311ea   2 weeks ago      547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago      519MB
+postgres     latest    76e3e031d245   4 weeks ago      438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago      336MB
+alpine       latest    aded1e1a5b37   6 weeks ago      7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago      701MB
+nginx        latest    53a18edff809   7 weeks ago      192MB
+python       latest    e6c8fe2e1108   7 weeks ago      1.02GB
+ubuntu       latest    a04dc4851cbc   2 months ago     78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago     570MB
+httpd        latest    83d938198316   2 months ago     148MB
+mysql        latest    fa262c3a6564   2 months ago     797MB
+redis        latest    ad4b31aa2de6   2 months ago     117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago     72.8MB
+openjdk      latest    71260f256d19   2 years ago      470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+failmlbb     20.04     63e4872f4c1c   7 minutes ago   72.8MB
+joomla       latest    29595f1bada0   6 days ago      760MB
+adminer      latest    d1ce2535a665   10 days ago     121MB
+php          latest    cd0e124311ea   2 weeks ago     547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago     519MB
+postgres     latest    76e3e031d245   4 weeks ago     438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago     336MB
+alpine       latest    aded1e1a5b37   6 weeks ago     7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago     701MB
+nginx        latest    53a18edff809   7 weeks ago     192MB
+python       latest    e6c8fe2e1108   7 weeks ago     1.02GB
+ubuntu       latest    a04dc4851cbc   2 months ago    78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago    570MB
+httpd        latest    83d938198316   2 months ago    148MB
+mysql        latest    fa262c3a6564   2 months ago    797MB
+redis        latest    ad4b31aa2de6   2 months ago    117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago    72.8MB
+openjdk      latest    71260f256d19   2 years ago     470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+Digest: sha256:7f29c02ba9eeff4de9a9f414d803faa0e6fe5e8d15ebe217e3e418c82e652b35
+Status: Image is up to date for postgres:latest
+docker.io/library/postgres:latest
+@Failmlbb ➜ /workspaces/-02 (main) $ docker pull posgres
+Using default tag: latest
+Error response from daemon: pull access denied for posgres, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+@Failmlbb ➜ /workspaces/-02 (main) $ ^C
+@Failmlbb ➜ /workspaces/-02 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+failmlbb     20.04     63e4872f4c1c   38 minutes ago   72.8MB
+joomla       latest    29595f1bada0   6 days ago       760MB
+adminer      latest    d1ce2535a665   10 days ago      121MB
+php          latest    cd0e124311ea   2 weeks ago      547MB
+tomcat       latest    88b0f1cee84c   3 weeks ago      519MB
+postgres     latest    76e3e031d245   4 weeks ago      438MB
+mariadb      latest    a914eff5d2eb   5 weeks ago      336MB
+alpine       latest    aded1e1a5b37   6 weeks ago      7.83MB
+wordpress    latest    52bb3e73152a   6 weeks ago      701MB
+nginx        latest    53a18edff809   7 weeks ago      192MB
+python       latest    e6c8fe2e1108   7 weeks ago      1.02GB
+ubuntu       latest    a04dc4851cbc   2 months ago     78.1MB
+phpmyadmin   latest    052506f2de4d   2 months ago     570MB
+httpd        latest    83d938198316   2 months ago     148MB
+mysql        latest    fa262c3a6564   2 months ago     797MB
+redis        latest    ad4b31aa2de6   2 months ago     117MB
+ubuntu       20.04     6013ae1a63c2   5 months ago     72.8MB
+openjdk      latest    71260f256d19   2 years ago      470MB
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   3306/tcp, 33060/tcp   mysql-container
+@Failmlbb ➜ /workspaces/-02 (main) $ docker exec -it fervent_babbage  postgres -u root -p
+"root" execution of the PostgreSQL server is not permitted.
+The server must be started under an unprivileged user ID to prevent
+possible system security compromise.  See the documentation for
+more information on how to properly start the server.
+@Failmlbb ➜ /workspaces/-02 (main) $ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                 NAMES
+29c761d1c123   fa262c3a6564   "docker-entrypoint.s…"   8 minutes ago    Up 8 minutes    3306/tcp, 33060/tcp   interesting_payne
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   28 minutes ago   Up 28 minutes   5432/tcp              fervent_babbage
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   46 minutes ago   Up 46 minutes   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   46 minutes ago   Up 46 minutes   3306/tcp, 33060/tcp   mysql-container
