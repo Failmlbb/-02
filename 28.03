@@ -1,0 +1,102 @@
+@Failmlbb ➜ /workspaces/-02 (main) $ docker volume create tom1
+tom1
+@Failmlbb ➜ /workspaces/-02 (main) $ docker volume create tom2
+tom2
+@Failmlbb ➜ /workspaces/-02 (main) $ docker volume inspect tom1
+[
+    {
+        "CreatedAt": "2025-04-03T05:55:52Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/tom1/_data",
+        "Name": "tom1",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+@Failmlbb ➜ /workspaces/-02 (main) $  docker run --mount type=volume,source=tom1,target=/home/tom1 --name nametom1 -it ubuntu:22.04
+Unable to find image 'ubuntu:22.04' locally
+22.04: Pulling from library/ubuntu
+9cb31e2e37ea: Pull complete 
+Digest: sha256:ed1544e454989078f5dec1bfdabd8c5cc9c48e0705d07b678ab6ae3fb61952d2
+Status: Downloaded newer image for ubuntu:22.04
+root@6cbe569fccc0:/#  cd /home/tom1/
+root@6cbe569fccc0:/home/tom1# /home/tom1# ls -l
+bash: /home/tom1#: No such file or directory
+root@6cbe569fccc0:/home/tom1# /home/tom1# cat > para.txt
+bash: /home/tom1#: No such file or directory
+root@6cbe569fccc0:/home/tom1# /home/tom1# exit
+bash: /home/tom1#: No such file or directory
+root@6cbe569fccc0:/home/tom1# exit
+exit
+@Failmlbb ➜ /workspaces/-02 (main) $ mkdir tom3
+@Failmlbb ➜ /workspaces/-02 (main) $ cd tom3
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ touch fa1
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ pwd
+/workspaces/-02/tom3
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ tom3$ docker run --mount type=volume,source=tom1,target=/home/tom1 --mount type=bind,source=/home/u16/tom3,target=/home/tom2 --name nametom2 -it ubuntu:22.04
+bash: tom3$: command not found
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ cat > para2.txt
+exit
+^C  
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ ^C
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ tom3$ docker run --mount type=volume,source=tom1,target=/home/tom1 --mount type=bind,source=/home/u16/tom3,target=/home/tom2 --name nametom2 -it ubuntu:22.04
+bash: tom3$: command not found
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ tom3$ docker run --mount type=volume,source=tom1,target=/home/tom1 --mount type=bind,source=/home/u16/tom3,target=/home/tom2 --name nametom2 -it ubuntu:22.04
+bash: tom3$: command not found
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ ls -l
+total 4
+-rw-rw-rw- 1 codespace codespace 0 Apr  3 05:59 fa1
+-rw-rw-rw- 1 codespace codespace 5 Apr  3 06:01 para2.txt
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ touch 1
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ echo "Good moning" > fa1
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ cat fa1
+Good moning
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                        PORTS                 NAMES
+6cbe569fccc0   ubuntu:22.04   "/bin/bash"              11 minutes ago   Exited (127) 9 minutes ago                          nametom1
+29c761d1c123   fa262c3a6564   "docker-entrypoint.s…"   6 days ago       Exited (255) 12 minutes ago   3306/tcp, 33060/tcp   interesting_payne
+37fda9e662c0   fa262c3a6564   "docker-entrypoint.s…"   6 days ago       Exited (1) 6 days ago                               quizzical_napier
+d237f1ca6a82   76e3e031d245   "docker-entrypoint.s…"   6 days ago       Exited (255) 12 minutes ago   5432/tcp              fervent_babbage
+830fb5a807da   76e3e031d245   "docker-entrypoint.s…"   6 days ago       Exited (1) 6 days ago                               modest_poitras
+1afe6fa693c3   fa262c3a6564   "docker-entrypoint.s…"   6 days ago       Exited (1) 6 days ago                               eloquent_gauss
+fad7e9402530   fa262c3a6564   "docker-entrypoint.s…"   6 days ago       Exited (1) 6 days ago                               heuristic_golick
+3fcdd9bfbb24   postgres       "docker-entrypoint.s…"   6 days ago       Exited (255) 12 minutes ago   5432/tcp              postgres-container
+3c7901ce3c79   mysql          "docker-entrypoint.s…"   6 days ago       Exited (255) 12 minutes ago   3306/tcp, 33060/tcp   mysql-container
+938a0769e64c   76e3e031d245   "docker-entrypoint.s…"   6 days ago       Exited (1) 6 days ago                               practical_leakey
+c32b26d4b07e   6013ae1a63c2   "/bin/bash"              6 days ago       Exited (127) 6 days ago                             bold_chatterjee
+c8ef077ae381   6013ae1a63c2   "/bin/bash"              6 days ago       Exited (0) 6 days ago                               reverent_banach
+ec6d099794af   6013ae1a63c2   "/bin/bash"              6 days ago       Exited (0) 6 days ago                               pedantic_chaplygin
+06350d1a8e37   6013ae1a63c2   "/bin/bash"              6 days ago       Exited (255) 6 days ago                             priceless_fermi
+de5baf5346c2   ubuntu         "sh"                     6 days ago       Exited (127) 6 days ago                             sad_saha
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $  docker exec -it ^C
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $  docker exec -it 6cbe569fccc0
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker exec -it 6cbe569fccc0 bash
+Error response from daemon: container 6cbe569fccc061947d80a189d3bb32f4d9831a30449264c5ddcb1222cf79c022 is not running
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker exec -it 6cbe569fccc0 bash
+Error response from daemon: container 6cbe569fccc061947d80a189d3bb32f4d9831a30449264c5ddcb1222cf79c022 is not running
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker start^
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker start 6cbe569fccc0
+6cbe569fccc0
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker exec -it 6cbe569fccc0 bash
+root@6cbe569fccc0:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@6cbe569fccc0:/# cd home
+root@6cbe569fccc0:/home# ls
+tom1
+root@6cbe569fccc0:/home# exit
+exit
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker start c32b26d4b07e
+c32b26d4b07e
+@Failmlbb ➜ /workspaces/-02/tom3 (main) $ docker exec -it c32b26d4b07e  bash
+root@c32b26d4b07e:/# cd home
+root@c32b26d4b07e:/home# ls
+root@c32b26d4b07e:/home# ls tom2
+ls: cannot access 'tom2': No such file or directory
+root@c32b26d4b07e:/home# 
