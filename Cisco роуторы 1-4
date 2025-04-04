@@ -1,0 +1,139 @@
+Router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.19.0/24 is variably subnetted, 4 subnets, 2 masks
+C       192.168.19.0/26 is directly connected, GigabitEthernet0/0
+L       192.168.19.62/32 is directly connected, GigabitEthernet0/0
+S       192.168.19.64/26 [1/0] via 192.168.20.2
+S       192.168.19.128/26 [1/0] via 192.168.20.6
+     192.168.20.0/24 is variably subnetted, 4 subnets, 2 masks
+C       192.168.20.0/30 is directly connected, GigabitEthernet0/1/0
+L       192.168.20.1/32 is directly connected, GigabitEthernet0/1/0
+C       192.168.20.4/30 is directly connected, GigabitEthernet0/3/0
+L       192.168.20.5/32 is directly connected, GigabitEthernet0/3/0
+2 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.19.0/24 is variably subnetted, 5 subnets, 3 masks
+S       192.168.19.0/26 [1/0] via 192.168.20.1
+C       192.168.19.64/26 is directly connected, GigabitEthernet0/0
+L       192.168.19.126/32 is directly connected, GigabitEthernet0/0
+S       192.168.19.128/26 [1/0] via 192.168.20.10
+S       192.168.19.160/28 [1/0] via 192.168.20.13
+     192.168.20.0/24 is variably subnetted, 6 subnets, 2 masks
+C       192.168.20.0/30 is directly connected, GigabitEthernet0/1/0
+L       192.168.20.2/32 is directly connected, GigabitEthernet0/1/0
+C       192.168.20.8/30 is directly connected, GigabitEthernet0/0/0
+L       192.168.20.9/32 is directly connected, GigabitEthernet0/0/0
+C       192.168.20.12/30 is directly connected, GigabitEthernet0/2/0
+ --More-- 
+3
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.19.0/24 is variably subnetted, 4 subnets, 2 masks
+S       192.168.19.0/26 [1/0] via 192.168.20.5
+S       192.168.19.64/26 [1/0] via 192.168.20.9
+C       192.168.19.128/26 is directly connected, GigabitEthernet0/0
+L       192.168.19.158/32 is directly connected, GigabitEthernet0/0
+     192.168.20.0/24 is variably subnetted, 6 subnets, 2 masks
+C       192.168.20.4/30 is directly connected, GigabitEthernet0/3/0
+L       192.168.20.6/32 is directly connected, GigabitEthernet0/3/0
+C       192.168.20.8/30 is directly connected, GigabitEthernet0/0/0
+L       192.168.20.10/32 is directly connected, GigabitEthernet0/0/0
+C       192.168.20.20/30 is directly connected, GigabitEthernet0/1/0
+L       192.168.20.22/32 is directly connected, GigabitEthernet0/1/0
+ --More-- 
+4
+Router#Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+              ^
+% Invalid input detected at '^' marker.
+	
+Router#       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+% Ambiguous command: "       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area"
+Router#       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router#       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router#       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+                ^
+% Invalid input detected at '^' marker.
+	
+Router#       * - candidate default, U - per-user static route, o - ODR
+                ^
+% Invalid input detected at '^' marker.
+	
+Router#       P - periodic downloaded static route
+                  ^
+% Invalid input detected at '^' marker.
+	
+Router#
+Router#Gateway of last resort is not set
+               ^
+% Invalid input detected at '^' marker.
+	
+Router#
+Router#     192.168.19.0/24 is variably subnetted, 4 subnets, 2 masks
+                            ^
+% Invalid input detected at '^' marker.
+	
+Router#S       192.168.19.0/26 [1/0] via 192.168.20.5
+% Ambiguous command: "S       192.168.19.0/26 [1/0] via 192.168.20.5"
+Router#S       192.168.19.64/26 [1/0] via 192.168.20.9
+% Ambiguous command: "S       192.168.19.64/26 [1/0] via 192.168.20.9"
+Router#C       192.168.19.128/26 is directly connected, GigabitEthernet0/0
+% Ambiguous command: "C       192.168.19.128/26 is directly connected, GigabitEthernet0/0"
+Router#L       192.168.19.158/32 is directly connected, GigabitEthernet0/0
+               ^
+% Invalid input detected at '^' marker.
+	
+Router#     192.168.20.0/24 is variably subnetted, 6 subnets, 2 masks
+                            ^
+% Invalid input detected at '^' marker.
+	
+Router#C       192.168.20.4/30 is directly connected, GigabitEthernet0/3/0
+% Ambiguous command: "C       192.168.20.4/30 is directly connected, GigabitEthernet0/3/0"
+Router#L       192.168.20.6/32 is directly connected, GigabitEthernet0/3/0
+               ^
+% Invalid input detected at '^' marker.
+	
+Router#C       192.168.20.8/30 is directly connected, GigabitEthernet0/0/0
+% Ambiguous command: "C       192.168.20.8/30 is directly connected, GigabitEthernet0/0/0"
+Router#L       192.168.20.10/32 is directly connected, GigabitEthernet0/0/0
+               ^
+% Invalid input detected at '^' marker.
+	
+Router#C       192.168.20.20/30 is directly connected, GigabitEthernet0/1/0
+% Ambiguous command: "C       192.168.20.20/30 is directly connected, GigabitEthernet0/1/0"
+Router#L       192.168.20.22/32 is directly connected, GigabitEthernet0/1/0
+               ^
+% Invalid input detected at '^' marker.
+	
+Router# --More-- 
