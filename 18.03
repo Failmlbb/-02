@@ -1,0 +1,308 @@
+u28@u28-VirtualBox:~$ docker images
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+app-php                  0.1       f142390a85f9   2 weeks ago    410MB
+joomla                   latest    29595f1bada0   3 weeks ago    760MB
+clearlinux               latest    202109cef637   4 weeks ago    198MB
+adminer                  latest    d1ce2535a665   4 weeks ago    121MB
+php                      latest    cd0e124311ea   5 weeks ago    547MB
+redmine                  latest    7d35e1c9e446   5 weeks ago    611MB
+clearlinux               <none>    6c25eee4999c   6 weeks ago    198MB
+tomcat                   latest    88b0f1cee84c   6 weeks ago    519MB
+postgres                 latest    76e3e031d245   7 weeks ago    438MB
+mariadb                  latest    a914eff5d2eb   2 months ago   336MB
+alpine                   latest    aded1e1a5b37   2 months ago   7.83MB
+wordpress                latest    52bb3e73152a   2 months ago   701MB
+nginx                    latest    53a18edff809   2 months ago   192MB
+python                   latest    e6c8fe2e1108   2 months ago   1.02GB
+phpmyadmin               latest    052506f2de4d   2 months ago   570MB
+httpd                    latest    83d938198316   2 months ago   148MB
+mysql                    latest    fa262c3a6564   2 months ago   797MB
+mysql                    <none>    5568fddd4f66   2 months ago   797MB
+redis                    latest    ad4b31aa2de6   3 months ago   117MB
+ubuntu                   20.04     6013ae1a63c2   6 months ago   72.8MB
+openjdk                  latest    71260f256d19   2 years ago    470MB
+docker/getting-started   latest    3e4394f6b72f   2 years ago    47MB
+u28@u28-VirtualBox:~$ docker rmi python:latest 
+Untagged: python:latest
+Untagged: python@sha256:8c55c44b9e81d537f8404d0000b7331863d134db87c1385dd0ec7fefff656495
+Deleted: sha256:e6c8fe2e11080a1bc3b388b235b836d23ce4181cb0f5dda88f38d095b64187a9
+Deleted: sha256:084ec53dacce249ef1bbce0e705583aa35d28f20cec0cde37157509951481b58
+Deleted: sha256:7fab3c23216ac2514fc92ddeee1b95e5499d973305a4348c1373d73863cea217
+Deleted: sha256:f2c31f0fcadc95fdf50651330ac198f4ea8e9b3dc53d0141fb2fae75b1ca87c2
+Deleted: sha256:0af8481c39117e6f9e14f9230a4c12d9d170b28be3eef5629121c78e472bae34
+Deleted: sha256:27e66bba1c7251b5d8b5d80725b7e5c9ae37897c75cb8c9097df42fdb6976ac6
+Deleted: sha256:24d3228e29e3d279f23859f348347039001d5131c018fd334355cf97b0ebd99f
+Deleted: sha256:53babe930602419c46727120034c3748ae023bef28f10edb018fbcfbcedbc0e8
+u28@u28-VirtualBox:~$ docker rmi mysql:none
+Error response from daemon: No such image: mysql:none
+u28@u28-VirtualBox:~$ docker images
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+app-php                  0.1       f142390a85f9   2 weeks ago    410MB
+joomla                   latest    29595f1bada0   3 weeks ago    760MB
+clearlinux               latest    202109cef637   4 weeks ago    198MB
+adminer                  latest    d1ce2535a665   4 weeks ago    121MB
+php                      latest    cd0e124311ea   5 weeks ago    547MB
+redmine                  latest    7d35e1c9e446   5 weeks ago    611MB
+clearlinux               <none>    6c25eee4999c   6 weeks ago    198MB
+tomcat                   latest    88b0f1cee84c   6 weeks ago    519MB
+postgres                 latest    76e3e031d245   7 weeks ago    438MB
+mariadb                  latest    a914eff5d2eb   2 months ago   336MB
+alpine                   latest    aded1e1a5b37   2 months ago   7.83MB
+wordpress                latest    52bb3e73152a   2 months ago   701MB
+nginx                    latest    53a18edff809   2 months ago   192MB
+phpmyadmin               latest    052506f2de4d   2 months ago   570MB
+httpd                    latest    83d938198316   2 months ago   148MB
+mysql                    <none>    5568fddd4f66   2 months ago   797MB
+mysql                    latest    fa262c3a6564   2 months ago   797MB
+redis                    latest    ad4b31aa2de6   3 months ago   117MB
+ubuntu                   20.04     6013ae1a63c2   6 months ago   72.8MB
+openjdk                  latest    71260f256d19   2 years ago    470MB
+docker/getting-started   latest    3e4394f6b72f   2 years ago    47MB
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container eb8f0ef36567
+u28@u28-VirtualBox:~$ docker rm eb8f0ef36567
+eb8f0ef36567
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container 8f63dc72bff2
+u28@u28-VirtualBox:~$ docker rm 8f63dc72bff2
+8f63dc72bff2
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container b91414b6d539
+u28@u28-VirtualBox:~$ docker rm b91414b6d539
+b91414b6d539
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container d19ab3acb93d
+u28@u28-VirtualBox:~$ docker rm d19ab3acb93d
+d19ab3acb93d
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container 68de60754c61
+u28@u28-VirtualBox:~$ docker rm 68de60754c61
+68de60754c61
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container 94797b7dcb2c
+u28@u28-VirtualBox:~$ docker rm 94797b7dcb2c
+94797b7dcb2c
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Error response from daemon: conflict: unable to delete 5568fddd4f66 (must be forced) - image is being used by stopped container dea0512b051e
+u28@u28-VirtualBox:~$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+b68aed771859bd0f59ee9eb840593ac4c71898ebc3b4a48309ac4f9883c0ba7b
+69fb35f5517bfd45cabcc9d9488b033f06ceb69e200a964cbf5f0fdb995cfdd2
+cfdf4562cf2ad5a116cc391bfe3c372f68cfa599f9934ef5e18cca54d3247146
+5e63d6ea09ed20c83795ef92324aa3df5f55814c9f5d2b1f9aeba9c495c6fab0
+da225158afd7da8c84b82b6a9564e35fef6620624c8dbd43df8b615071e7069d
+70e79af87ae961d7ccc390cb202593a7250fc8f7091d1e03b3558b865b5f3a63
+32f90a0e4c64280e93998b656d21052ac6d0cf0623ebc49712285f118ff962b2
+dea0512b051e4d5a7b7a2f535203e342c4fa76b29e3a1f52e7d2448ad076d817
+96872e0eb1b4991866fac83caee82b9b9be085ed1139e7280b86e708ef585351
+4074e47c0a0b3c463839da5ebf23e27a24c56cefdc4e83a08cb1c0bb82e779a3
+c8c61e184bdad242f027e3a2eb22acf1e014e2366ac145d3d83082771f167b87
+c4bf609c691e0fdbda3fa07191bce3e039e4fc8800e473d761b3ffc0564be2d6
+b99033c0afa74269e545c70110f0d25e44e7848b99f7d5aed1bc8d573ad1cd89
+
+Total reclaimed space: 22.41MB
+u28@u28-VirtualBox:~$ docker rmi 5568fddd4f66
+Untagged: mysql@sha256:146682692a3aa409eae7b7dc6a30f637c6cb49b6ca901c2cd160becc81127d3b
+Deleted: sha256:5568fddd4f66008ebae555bfee3e999a8f8e6516fbe974e0af11013e83e241fd
+Deleted: sha256:dcfb7b5fc76a9fc636468772924a0b94f399f3215b44a1330efc9b3ab7387c53
+Deleted: sha256:4141362c311e6120b69cd765cda0d4169d25c6837cfd00c2d1db0c3211ae937b
+Deleted: sha256:060ecb06512a7cfc2d519dd0466b198154633e61df0bab3b55e559ce99113cf3
+Deleted: sha256:ca5252e654f6bd8d0ab62227c38d7070049aa95913979c3638a5a632f9bc1cd0
+Deleted: sha256:96436c987a3a6a85114df571d96f7c51cf23e7b90804939ff6684824b64c1d27
+Deleted: sha256:e1074a2c0f4d3d6940fe7b384f91b9a8fc9f29bdb59141cd8ec915c7cdf1a45e
+Deleted: sha256:98e974da3915c2bd53bb2fe8b31e59d039515953d34326bd17773f1dcdc6b981
+Deleted: sha256:c8f1c40f14209c25b17ec74892c0aeaee503f4521c160dad8ea4df0d6920ef97
+Deleted: sha256:94f93b2b7f8c27e5763d0388aa03e2816def806b60448a4cef575acb674b8588
+Deleted: sha256:d7b2257a2277cf62be373f5e32a77274c67cdcdb474af84f2f01b95d8f6ebd0d
+u28@u28-VirtualBox:~$ df -h
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            197M         1,5M  196M            1% /run
+/dev/sda3         24G          21G  2,5G           90% /
+tmpfs            985M            0  985M            0% /dev/shm
+tmpfs            5,0M         4,0K  5,0M            1% /run/lock
+/dev/sda2        512M         6,1M  506M            2% /boot/efi
+tmpfs            197M         104K  197M            1% /run/user/1000
+u28@u28-VirtualBox:~$ docker images
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+app-php                  0.1       f142390a85f9   2 weeks ago    410MB
+joomla                   latest    29595f1bada0   3 weeks ago    760MB
+clearlinux               latest    202109cef637   4 weeks ago    198MB
+adminer                  latest    d1ce2535a665   4 weeks ago    121MB
+php                      latest    cd0e124311ea   5 weeks ago    547MB
+redmine                  latest    7d35e1c9e446   5 weeks ago    611MB
+clearlinux               <none>    6c25eee4999c   6 weeks ago    198MB
+tomcat                   latest    88b0f1cee84c   6 weeks ago    519MB
+postgres                 latest    76e3e031d245   7 weeks ago    438MB
+mariadb                  latest    a914eff5d2eb   2 months ago   336MB
+alpine                   latest    aded1e1a5b37   2 months ago   7.83MB
+wordpress                latest    52bb3e73152a   2 months ago   701MB
+nginx                    latest    53a18edff809   2 months ago   192MB
+phpmyadmin               latest    052506f2de4d   2 months ago   570MB
+httpd                    latest    83d938198316   2 months ago   148MB
+mysql                    latest    fa262c3a6564   2 months ago   797MB
+redis                    latest    ad4b31aa2de6   3 months ago   117MB
+ubuntu                   20.04     6013ae1a63c2   6 months ago   72.8MB
+u28@u28-VirtualBox:~$ sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+[sudo] пароль для u28: 
+u28@u28-VirtualBox:~$ sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+[sudo] пароль для u28: 
+u28@u28-VirtualBox:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:fd:94:ec brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 81949sec preferred_lft 81949sec
+    inet6 fe80::a00:27ff:fefd:94ec/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:dc:ea:c6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.28.1/24 brd 192.168.28.255 scope global enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fedc:eac6/64 scope link 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 1e:3c:40:d3:d9:0c brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+u28@u28-VirtualBox:~$ ssh vlad@192.168.28.10
+The authenticity of host '192.168.28.10 (192.168.28.10)' can't be established.
+ED25519 key fingerprint is SHA256:8TuaNE2DMyCh7ZalfLg0+UBphmFRtGpcNw7YTxTpxK8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.28.10' (ED25519) to the list of known hosts.
+vlad@192.168.28.10's password: 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-131-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Пт 18 апр 2025 08:58:35 UTC
+
+  System load:  0.08544921875      Processes:                114
+  Usage of /:   52.3% of 11.21GB   Users logged in:          2
+  Memory usage: 15%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for enp0s3:  192.168.28.10
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Расширенное поддержание безопасности (ESM) для Applications выключено.
+
+146 обновлений может быть применено немедленно.
+59 из этих обновлений, являются стандартными обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Включите ESM Apps для получения дополнительных будущих обновлений безопасности.
+Смотрите https://ubuntu.com/esm или выполните: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+*** System restart required ***
+Last login: Fri Apr 18 08:06:50 2025
+vlad@cthdth:~$ docker
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  bake        Build from a file
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Authenticate to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default
+                           "/home/vlad/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon
+                           (overrides DOCKER_HOST env var and default context set
+                           with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn",
+                           "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/vlad/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/vlad/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/vlad/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+vlad@cthdth:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+vlad@cthdth:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+vlad@cthdth:~$ docker --version
+Docker version 28.1.0, build 4d8c241
+vlad@cthdth:~$ 
